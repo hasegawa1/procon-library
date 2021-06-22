@@ -11,10 +11,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_B
     links:
-    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B
-  bundledCode: "#line 1 \"test/aoj_grl_1_b.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B\"\
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_B
+  bundledCode: "#line 1 \"test/aoj_grl_1_b.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_B\"\
     \n\n#include <iostream>\n#include <algorithm>\n#line 1 \"graph/bellman_ford.cpp\"\
     \n/**\n * @brief \u5358\u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08\
     Bellman Ford\uFF09\n * @author hasegawa1\n */\n\n#include <vector>\n#line 8 \"\
@@ -43,7 +43,7 @@ data:
     \ << endl;\n        return 0;\n    }\n    for(auto d: dist) {\n        if(d ==\
     \ numeric_limits<int64_t>::max()) {\n            cout << \"INF\" << endl;\n  \
     \      } else {\n            cout << d << endl;\n        }\n    }\n}\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B\"\
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_B\"\
     \n\n#include <iostream>\n#include <algorithm>\n#include \"../graph/bellman_ford.cpp\"\
     \n\nusing namespace std;\n\ntemplate<typename T>\nusing Edges = std::vector<std::tuple<int,int,T>>;\n\
     \nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
@@ -60,7 +60,7 @@ data:
   isVerificationFile: true
   path: test/aoj_grl_1_b.test.cpp
   requiredBy: []
-  timestamp: '2021-06-22 19:39:51+09:00'
+  timestamp: '2021-06-22 22:19:14+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj_grl_1_b.test.cpp

@@ -11,10 +11,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A
     links:
-    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A
-  bundledCode: "#line 1 \"test/aoj_grl_1_a.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A\"\
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A
+  bundledCode: "#line 1 \"test/aoj_grl_1_a.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A\"\
     \n\n#include <iostream>\n#line 1 \"graph/dijkstra.cpp\"\n/**\n * @brief \u5358\
     \u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Dijkstra\uFF09\n * @author\
     \ hasegawa1\n */\n\n#include <vector>\n#include <queue>\n#include <functional>\n\
@@ -38,7 +38,7 @@ data:
     \ d;\n        g[s].emplace_back(t, d);\n    }\n\n    for(const auto d: dijkstra(g,\
     \ r)) {\n        if(d == -1) {\n            cout << \"INF\" << endl;\n       \
     \ } else {\n            cout << d << endl;\n        }\n    }\n}\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A\"\
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A\"\
     \n\n#include <iostream>\n#include \"../graph/dijkstra.cpp\"\n\nusing namespace\
     \ std;\n\ntemplate<typename T>\nusing WeightedGraph = std::vector<std::vector<std::pair<int,T>>>;\n\
     \nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
@@ -52,7 +52,7 @@ data:
   isVerificationFile: true
   path: test/aoj_grl_1_a.test.cpp
   requiredBy: []
-  timestamp: '2021-06-22 19:15:38+09:00'
+  timestamp: '2021-06-22 22:19:14+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj_grl_1_a.test.cpp
