@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: graph/dijkstra.cpp
-    title: "\u30B0\u30E9\u30D5\u4E0A\u306E\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Dijkstra\uFF09"
+    title: "\u5358\u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Dijkstra\uFF09"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -15,9 +15,9 @@ data:
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A
   bundledCode: "#line 1 \"test/aoj_grl_1_a.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A\"\
-    \n\n#include <iostream>\n#line 1 \"graph/dijkstra.cpp\"\n/**\n * @brief \u30B0\
-    \u30E9\u30D5\u4E0A\u306E\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Dijkstra\uFF09\n *\
-    \ @author hasegawa1\n */\n\n#include <vector>\n#include <queue>\n#include <functional>\n\
+    \n\n#include <iostream>\n#line 1 \"graph/dijkstra.cpp\"\n/**\n * @brief \u5358\
+    \u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Dijkstra\uFF09\n * @author\
+    \ hasegawa1\n */\n\n#include <vector>\n#include <queue>\n#include <functional>\n\
     \ntemplate<typename T>\nusing WeightedGraph = std::vector<std::vector<std::pair<int,T>>>;\n\
     \ntemplate<typename T>\nstd::vector<T> dijkstra(const std::vector<std::vector<std::pair<int,T>>>\
     \ & adjacency_list, int start, T unreachable = -1) {\n    std::vector<T> dist(adjacency_list.size(),\
@@ -52,7 +52,7 @@ data:
   isVerificationFile: true
   path: test/aoj_grl_1_a.test.cpp
   requiredBy: []
-  timestamp: '2021-06-22 19:01:07+09:00'
+  timestamp: '2021-06-22 19:15:38+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj_grl_1_a.test.cpp
