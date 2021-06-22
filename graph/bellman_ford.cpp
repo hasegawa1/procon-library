@@ -4,22 +4,24 @@
  */
 
 #include <vector>
+#include <algorithm>
 #include <tuple>
+#include <limits>
 
 template<typename T>
 using Edges = std::vector<std::tuple<int,int,T>>;
 
 template<typename T>
 std::vector<T> bellman_ford(const std::vector<std::tuple<int,int,T>> & edge_list, int N, int start) {
-    constexpr T negative = numeric_limits<T>::min();
-    constexpr T unreachable = numeric_limits<T>::max();
+    constexpr T negative = std::numeric_limits<T>::min();
+    constexpr T unreachable = std::numeric_limits<T>::max();
     std::vector<T> dist(N, unreachable);
     dist[start] = 0;
 
     for(int x=0; x<N-1; x++) {
         for(const auto [v, u, cost]: edge_list) {
             if(dist[v] == unreachable) continue;
-            dist[u] = min(dist[u], dist[v] + cost);
+            dist[u] = std::min(dist[u], dist[v] + cost);
         }
     }
 
