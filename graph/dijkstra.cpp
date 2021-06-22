@@ -1,5 +1,5 @@
 /**
- * @brief グラフ上の最短経路長（Dijkstra）
+ * @brief 単一始点最短経路長（Dijkstra）
  * @author hasegawa1
  */
 
