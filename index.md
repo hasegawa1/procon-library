@@ -3,6 +3,10 @@ data:
   libraryCategories:
   - name: dp
     pages:
+    - icon: ':x:'
+      path: dp/longest_common_subsequence.cpp
+      title: "\u6700\u9577\u5171\u901A\u90E8\u5206\u5217\uFF08LCS: Longest Common\
+        \ Subsequence\uFF09"
     - icon: ':heavy_check_mark:'
       path: dp/longest_increasing_subsequence.cpp
       title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217\uFF08LIS: Longest Increasing\
@@ -33,6 +37,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj_dpl_1_d.test.cpp
       title: test/aoj_dpl_1_d.test.cpp
+    - icon: ':x:'
+      path: test/aoj_dpl_1_e.test.cpp
+      title: test/aoj_dpl_1_e.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj_dpl_2_a.test.cpp
       title: test/aoj_dpl_2_a.test.cpp
