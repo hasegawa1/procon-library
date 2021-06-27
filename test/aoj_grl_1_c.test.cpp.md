@@ -11,10 +11,10 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C
     links:
-    - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C
-  bundledCode: "#line 1 \"test/aoj_grl_1_c.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C\"\
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C
+  bundledCode: "#line 1 \"test/aoj_grl_1_c.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C\"\
     \n\n#include <iostream>\n#include <algorithm>\n#line 1 \"graph/warshall_floyd.cpp\"\
     \n/**\n * @brief \u5168\u70B9\u5BFE\u9593\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08\
     Warshall Floyd\uFF09\n * @author hasegawa1\n */\n\n#include <vector>\n#include\
@@ -39,7 +39,7 @@ data:
     \ {\n                cout << \"INF\" << (j == V-1 ? '\\n' : ' ');\n          \
     \  } else {\n                cout << dist[i][j] << (j == V-1 ? '\\n' : ' ');\n\
     \            }\n        }\n    }\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C\"\
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C\"\
     \n\n#include <iostream>\n#include <algorithm>\n#include \"../graph/warshall_floyd.cpp\"\
     \n\nusing namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
     \n    int V, E;\n    cin >> V >> E;\n    vector<vector<int>> g(V, vector<int>(V,\
@@ -57,7 +57,7 @@ data:
   isVerificationFile: true
   path: test/aoj_grl_1_c.test.cpp
   requiredBy: []
-  timestamp: '2021-06-22 22:39:49+09:00'
+  timestamp: '2021-06-27 23:17:32+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj_grl_1_c.test.cpp
