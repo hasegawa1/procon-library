@@ -24,8 +24,8 @@ data:
       title: "\u6700\u5C0F\u5168\u57DF\u6728\uFF08Prim\uFF09"
     - icon: ':heavy_check_mark:'
       path: graph/shortest_hamilton_cycle.cpp
-      title: "\u6700\u77ED\u30CF\u30DF\u30EB\u30C8\u30F3\u9589\u8DEF\uFF08\u5DE1\u56DE\
-        \u30BB\u30FC\u30EB\u30B9\u30DE\u30F3\u554F\u984C\uFF09"
+      title: "\u6700\u77ED\u30CF\u30DF\u30EB\u30C8\u30F3\u9589\u8DEF\uFF08TSP: Traveling\
+        \ Salesman Problem\uFF09"
     - icon: ':heavy_check_mark:'
       path: graph/warshall_floyd.cpp
       title: "\u5168\u70B9\u5BFE\u9593\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Warshall\
