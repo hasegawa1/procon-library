@@ -17,6 +17,9 @@ data:
       title: "\u5358\u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Bellman\
         \ Ford\uFF09"
     - icon: ':heavy_check_mark:'
+      path: graph/breadth_first_search.cpp
+      title: "\u5E45\u512A\u5148\u63A2\u7D22\uFF08BFS: Breadth First Search\uFF09"
+    - icon: ':heavy_check_mark:'
       path: graph/dijkstra.cpp
       title: "\u5358\u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Dijkstra\uFF09"
     - icon: ':heavy_check_mark:'
@@ -33,6 +36,9 @@ data:
   verificationCategories:
   - name: test
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_alds1_11_c.test.cpp
+      title: test/aoj_alds1_11_c.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj_dpl_1_d.test.cpp
       title: test/aoj_dpl_1_d.test.cpp
