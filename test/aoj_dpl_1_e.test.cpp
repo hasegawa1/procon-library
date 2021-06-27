@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <string>
-#include "../dp/longest_common_subsequence.cpp"
+#include "../dp/edit_distance.cpp"
 
 using namespace std;
 
@@ -12,5 +12,5 @@ int main(void) {
 
     string s1, s2;
     cin >> s1 >> s2;
-    cout << max(s1.size(), s2.size()) - longest_common_subsequence(s1, s2).size() << endl;
+    cout << edit_distance(s1, s2) << endl;
 }
