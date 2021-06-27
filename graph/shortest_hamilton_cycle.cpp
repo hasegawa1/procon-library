@@ -1,5 +1,5 @@
 /**
- * @brief 最短ハミルトン閉路（巡回セールスマン問題）
+ * @brief 最短ハミルトン閉路（TSP: Traveling Salesman Problem）
  * @author hasegawa1
  */
 
