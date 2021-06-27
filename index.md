@@ -7,6 +7,10 @@ data:
       path: dp/edit_distance.cpp
       title: "\u7DE8\u96C6\u8DDD\u96E2"
     - icon: ':heavy_check_mark:'
+      path: dp/longest_common_subsequence.cpp
+      title: "\u6700\u9577\u5171\u901A\u90E8\u5206\u5217\uFF08LCS: Longest Common\
+        \ Subsequence\uFF09"
+    - icon: ':heavy_check_mark:'
       path: dp/longest_increasing_subsequence.cpp
       title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217\uFF08LIS: Longest Increasing\
         \ Subsequence\uFF09"
@@ -36,6 +40,9 @@ data:
   verificationCategories:
   - name: test
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_alds1_10_c.test.cpp
+      title: test/aoj_alds1_10_c.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj_alds1_11_c.test.cpp
       title: test/aoj_alds1_11_c.test.cpp
