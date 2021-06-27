@@ -1,6 +1,12 @@
 ---
 data:
   libraryCategories:
+  - name: dp
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: dp/longest_increasing_subsequence.cpp
+      title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217\uFF08LIS: Longest Increasing\
+        \ Subsequence\uFF09"
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -24,6 +30,9 @@ data:
   verificationCategories:
   - name: test
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_dpl_1_d.test.cpp
+      title: test/aoj_dpl_1_d.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj_dpl_2_a.test.cpp
       title: test/aoj_dpl_2_a.test.cpp
