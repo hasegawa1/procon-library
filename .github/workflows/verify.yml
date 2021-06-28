@@ -8,6 +8,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+      with:
+        submodules: true
 
     - name: Set up Python
       uses: actions/setup-python@v1
@@ -15,11 +17,6 @@ jobs:
     - name: Install dependencies
       run: pip3 install -U online-judge-verify-helper
 
-    - name: Clone AtCoder Library
-      uses: actions/checkout@v2
-      with:
-        repository: atcoder/ac-library
-        path: ac-library
 
     # required only if you want to verify Haskell code
     # - name: Install dependencies (Haskell)
