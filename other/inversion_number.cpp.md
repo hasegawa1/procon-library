@@ -1,12 +1,6 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: ac-library/atcoder/fenwicktree.hpp
-    title: ac-library/atcoder/fenwicktree.hpp
-  - icon: ':heavy_check_mark:'
-    path: ac-library/atcoder/internal_type_traits.hpp
-    title: ac-library/atcoder/internal_type_traits.hpp
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
@@ -31,9 +25,7 @@ data:
     \    const int M = *std::max_element(v.begin(), v.end()) + 1;\n    atcoder::fenwick_tree<int>\
     \ fen(M);\n\n    int64_t res = 0;\n    for(int i=0; i<N; i++) {\n        res +=\
     \ fen.sum(v[i]+1, M);\n        fen.add(v[i], 1);\n    }\n\n    return res;\n}\n"
-  dependsOn:
-  - ac-library/atcoder/fenwicktree.hpp
-  - ac-library/atcoder/internal_type_traits.hpp
+  dependsOn: []
   isVerificationFile: false
   path: other/inversion_number.cpp
   requiredBy: []

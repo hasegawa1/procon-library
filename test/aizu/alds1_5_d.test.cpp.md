@@ -2,12 +2,6 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: ac-library/atcoder/fenwicktree.hpp
-    title: ac-library/atcoder/fenwicktree.hpp
-  - icon: ':heavy_check_mark:'
-    path: ac-library/atcoder/internal_type_traits.hpp
-    title: ac-library/atcoder/internal_type_traits.hpp
-  - icon: ':heavy_check_mark:'
     path: other/inversion_number.cpp
     title: "1\u6B21\u5143\u7D2F\u7A4D\u548C"
   _extendedRequiredBy: []
@@ -45,8 +39,6 @@ data:
     \ << endl;\n}\n"
   dependsOn:
   - other/inversion_number.cpp
-  - ac-library/atcoder/fenwicktree.hpp
-  - ac-library/atcoder/internal_type_traits.hpp
   isVerificationFile: true
   path: test/aizu/alds1_5_d.test.cpp
   requiredBy: []
