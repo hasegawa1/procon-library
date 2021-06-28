@@ -37,6 +37,11 @@ data:
       path: graph/warshall_floyd.cpp
       title: "\u5168\u70B9\u5BFE\u9593\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Warshall\
         \ Floyd\uFF09"
+  - name: other
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: other/schedule_intervals.cpp
+      title: "\u533A\u9593\u30B9\u30B1\u30B8\u30E5\u30FC\u30EA\u30F3\u30B0\u554F\u984C"
   verificationCategories:
   - name: test
     pages:
@@ -46,6 +51,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj_alds1_11_c.test.cpp
       title: test/aoj_alds1_11_c.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aoj_alds1_15_c.test.cpp
+      title: test/aoj_alds1_15_c.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aoj_dpl_1_d.test.cpp
       title: test/aoj_dpl_1_d.test.cpp
