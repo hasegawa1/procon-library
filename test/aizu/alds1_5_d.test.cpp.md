@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: other/inversion_number.cpp
-    title: "1\u6B21\u5143\u7D2F\u7A4D\u548C"
+    title: "\u8EE2\u5012\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -16,9 +16,9 @@ data:
     - https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_D
   bundledCode: "#line 1 \"test/aizu/alds1_5_d.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_D\"\
     \n\n#include <iostream>\n#include <numeric>\n#line 1 \"other/inversion_number.cpp\"\
-    \n/**\n * @brief 1\u6B21\u5143\u7D2F\u7A4D\u548C\n * @author hasegawa1\n */\n\n\
-    #include <vector>\n#include <algorithm>\n#include <cstdint>\n#include <atcoder/fenwicktree>\n\
-    \nint64_t inversion_number(const std::vector<int> & v) {\n    const int N = v.size();\n\
+    \n/**\n * @brief \u8EE2\u5012\u6570\n * @author hasegawa1\n */\n\n#include <vector>\n\
+    #include <algorithm>\n#include <cstdint>\n#include <atcoder/fenwicktree>\n\nint64_t\
+    \ inversion_number(const std::vector<int> & v) {\n    const int N = v.size();\n\
     \    const int M = *std::max_element(v.begin(), v.end()) + 1;\n    atcoder::fenwick_tree<int>\
     \ fen(M);\n\n    int64_t res = 0;\n    for(int i=0; i<N; i++) {\n        res +=\
     \ fen.sum(v[i]+1, M);\n        fen.add(v[i], 1);\n    }\n\n    return res;\n}\n\
@@ -42,7 +42,7 @@ data:
   isVerificationFile: true
   path: test/aizu/alds1_5_d.test.cpp
   requiredBy: []
-  timestamp: '2021-06-28 23:02:59+09:00'
+  timestamp: '2021-06-28 23:39:45+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aizu/alds1_5_d.test.cpp

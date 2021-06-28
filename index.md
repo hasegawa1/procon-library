@@ -51,7 +51,7 @@ data:
       title: "2\u6B21\u5143\u7D2F\u7A4D\u548C"
     - icon: ':heavy_check_mark:'
       path: other/inversion_number.cpp
-      title: "1\u6B21\u5143\u7D2F\u7A4D\u548C"
+      title: "\u8EE2\u5012\u6570"
     - icon: ':heavy_check_mark:'
       path: other/schedule_intervals.cpp
       title: "\u533A\u9593\u30B9\u30B1\u30B8\u30E5\u30FC\u30EA\u30F3\u30B0\u554F\u984C"
