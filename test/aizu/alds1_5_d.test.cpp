@@ -1,7 +1,7 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_D"
 
 #include <iostream>
-#include <numeric>
+#include "../../other/Compress.cpp"
 #include "../../other/inversion_number.cpp"
 
 using namespace std;
@@ -17,11 +17,7 @@ int main(void) {
         cin >> a[i];
     }
 
-    vector<int> ord(n);
-    iota(ord.begin(), ord.end(), 0);
-    sort(ord.begin(), ord.end(), [&a](auto &lhs, auto &rhs) {
-        return a[lhs] < a[rhs];
-    });
+    Compress cmp(a);
 
-    cout << inversion_number(ord) << endl;
+    cout << inversion_number(cmp.get_all(a)) << endl;
 }
