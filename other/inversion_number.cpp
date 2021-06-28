@@ -1,5 +1,5 @@
 /**
- * @brief 1次元累積和
+ * @brief 転倒数
  * @author hasegawa1
  */
 
