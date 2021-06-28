@@ -13,7 +13,7 @@ private:
     const int _n;
     std::vector<T> _cumulative_sum;
 public:
-    explicit CumulativeSum(std::vector<T> v): _n(v.size()), _cumulative_sum(v) {
+    explicit CumulativeSum(const std::vector<T> & v): _n(v.size()), _cumulative_sum(v) {
         _cumulative_sum.emplace_back(T());
         std::exclusive_scan(_cumulative_sum.begin(), _cumulative_sum.end(), _cumulative_sum.begin(), T());
     }
