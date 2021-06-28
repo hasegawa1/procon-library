@@ -44,6 +44,9 @@ data:
   - name: other
     pages:
     - icon: ':heavy_check_mark:'
+      path: other/Compress.cpp
+      title: "\u5EA7\u6A19\u5727\u7E2E"
+    - icon: ':heavy_check_mark:'
       path: other/CumulativeSum.cpp
       title: "1\u6B21\u5143\u7D2F\u7A4D\u548C"
     - icon: ':heavy_check_mark:'
