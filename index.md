@@ -7,6 +7,10 @@ data:
       path: dp/edit_distance.cpp
       title: "\u7DE8\u96C6\u8DDD\u96E2"
     - icon: ':heavy_check_mark:'
+      path: dp/largest_rectangle_in_a_histogram.cpp
+      title: "\u30D2\u30B9\u30C8\u30B0\u30E9\u30E0\u4E2D\u306E\u6700\u5927\u9577\u65B9\
+        \u5F62\u306E\u9762\u7A4D"
+    - icon: ':heavy_check_mark:'
       path: dp/longest_common_subsequence.cpp
       title: "\u6700\u9577\u5171\u901A\u90E8\u5206\u5217\uFF08LCS: Longest Common\
         \ Subsequence\uFF09"
@@ -51,6 +55,9 @@ data:
   verificationCategories:
   - name: test/aizu
     pages:
+    - icon: ':heavy_check_mark:'
+      path: test/aizu/dpl_3_c.test.cpp
+      title: test/aizu/dpl_3_c.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/aizu/planetary_exploration.test.cpp
       title: test/aizu/planetary_exploration.test.cpp
