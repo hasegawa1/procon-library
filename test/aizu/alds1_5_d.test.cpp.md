@@ -1,15 +1,25 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
+    path: ac-library/atcoder/fenwicktree.hpp
+    title: ac-library/atcoder/fenwicktree.hpp
+  - icon: ':heavy_check_mark:'
+    path: ac-library/atcoder/internal_type_traits.hpp
+    title: ac-library/atcoder/internal_type_traits.hpp
+  - icon: ':heavy_check_mark:'
     path: other/inversion_number.cpp
     title: "1\u6B21\u5143\u7D2F\u7A4D\u548C"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
-  attributes: {}
+  _verificationStatusIcon: ':heavy_check_mark:'
+  attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_D
+    links:
+    - https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_D
   bundledCode: "#line 1 \"test/aizu/alds1_5_d.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_D\"\
     \n\n#include <iostream>\n#include <numeric>\n#line 1 \"other/inversion_number.cpp\"\
     \n/**\n * @brief 1\u6B21\u5143\u7D2F\u7A4D\u548C\n * @author hasegawa1\n */\n\n\
@@ -35,11 +45,13 @@ data:
     \ << endl;\n}\n"
   dependsOn:
   - other/inversion_number.cpp
+  - ac-library/atcoder/fenwicktree.hpp
+  - ac-library/atcoder/internal_type_traits.hpp
   isVerificationFile: true
   path: test/aizu/alds1_5_d.test.cpp
   requiredBy: []
   timestamp: '2021-06-28 23:02:59+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aizu/alds1_5_d.test.cpp
 layout: document

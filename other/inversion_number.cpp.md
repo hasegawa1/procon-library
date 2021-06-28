@@ -1,14 +1,20 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: ac-library/atcoder/fenwicktree.hpp
+    title: ac-library/atcoder/fenwicktree.hpp
+  - icon: ':heavy_check_mark:'
+    path: ac-library/atcoder/internal_type_traits.hpp
+    title: ac-library/atcoder/internal_type_traits.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: test/aizu/alds1_5_d.test.cpp
     title: test/aizu/alds1_5_d.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "1\u6B21\u5143\u7D2F\u7A4D\u548C"
     links: []
@@ -25,12 +31,14 @@ data:
     \    const int M = *std::max_element(v.begin(), v.end()) + 1;\n    atcoder::fenwick_tree<int>\
     \ fen(M);\n\n    int64_t res = 0;\n    for(int i=0; i<N; i++) {\n        res +=\
     \ fen.sum(v[i]+1, M);\n        fen.add(v[i], 1);\n    }\n\n    return res;\n}\n"
-  dependsOn: []
+  dependsOn:
+  - ac-library/atcoder/fenwicktree.hpp
+  - ac-library/atcoder/internal_type_traits.hpp
   isVerificationFile: false
   path: other/inversion_number.cpp
   requiredBy: []
   timestamp: '2021-06-28 23:02:59+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aizu/alds1_5_d.test.cpp
 documentation_of: other/inversion_number.cpp
