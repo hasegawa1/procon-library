@@ -31,8 +31,11 @@ data:
       path: graph/dijkstra.cpp
       title: "\u5358\u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Dijkstra\uFF09"
     - icon: ':heavy_check_mark:'
+      path: graph/kruskal.cpp
+      title: "\u6700\u5C0F\u5168\u57DF\u68EE\uFF08Kruskal\uFF09"
+    - icon: ':heavy_check_mark:'
       path: graph/prim.cpp
-      title: "\u6700\u5C0F\u5168\u57DF\u6728\uFF08Prim\uFF09"
+      title: "\u6700\u5C0F\u5168\u57DF\u68EE\uFF08Prim\uFF09"
     - icon: ':heavy_check_mark:'
       path: graph/shortest_hamilton_cycle.cpp
       title: "\u6700\u77ED\u30CF\u30DF\u30EB\u30C8\u30F3\u9589\u8DEF\uFF08TSP: Traveling\
@@ -68,6 +71,12 @@ data:
       path: test/aizu/dpl_3_c.test.cpp
       title: test/aizu/dpl_3_c.test.cpp
     - icon: ':heavy_check_mark:'
+      path: test/aizu/grl_2_a.kruskal.test.cpp
+      title: test/aizu/grl_2_a.kruskal.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: test/aizu/grl_2_a.prim.test.cpp
+      title: test/aizu/grl_2_a.prim.test.cpp
+    - icon: ':heavy_check_mark:'
       path: test/aizu/planetary_exploration.test.cpp
       title: test/aizu/planetary_exploration.test.cpp
   - name: test
@@ -99,9 +108,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: test/aoj_grl_1_c.test.cpp
       title: test/aoj_grl_1_c.test.cpp
-    - icon: ':heavy_check_mark:'
-      path: test/aoj_grl_2_a_prim.test.cpp
-      title: test/aoj_grl_2_a_prim.test.cpp
     - icon: ':heavy_check_mark:'
       path: test/example.test.cpp
       title: test/example.test.cpp
