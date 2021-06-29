@@ -20,8 +20,8 @@ public:
         }
     }
 
-    // [si, sj) x [gi, gj)
-    T operator()(int si, int sj, int gi, int gj) {
+    // [si, gi) x [sj, gj)
+    T operator()(int si, int sj, int gi, int gj) const {
         assert(0 <= si && si < gi && gi <= _h);
         assert(0 <= sj && sj < gj && gj <= _w);
         return _cumulative_sum2[gi][gj] - _cumulative_sum2[si][gj] - _cumulative_sum2[gi][sj] + _cumulative_sum2[si][sj];
