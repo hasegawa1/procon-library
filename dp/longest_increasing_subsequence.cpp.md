@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj_dpl_1_d.test.cpp
-    title: test/aoj_dpl_1_d.test.cpp
+    path: aizu/dpl_1_d.test.cpp
+    title: aizu/dpl_1_d.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -36,7 +36,7 @@ data:
   timestamp: '2021-06-28 00:36:18+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj_dpl_1_d.test.cpp
+  - aizu/dpl_1_d.test.cpp
 documentation_of: dp/longest_increasing_subsequence.cpp
 layout: document
 redirect_from:

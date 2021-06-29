@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aizu/alds1_5_d.test.cpp
-    title: test/aizu/alds1_5_d.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     document_title: "\u8EE2\u5012\u6570"
     links: []
@@ -30,9 +27,8 @@ data:
   path: other/inversion_number.cpp
   requiredBy: []
   timestamp: '2021-06-28 23:39:45+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/aizu/alds1_5_d.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: other/inversion_number.cpp
 layout: document
 redirect_from:

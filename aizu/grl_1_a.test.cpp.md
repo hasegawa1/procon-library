@@ -14,7 +14,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A
-  bundledCode: "#line 1 \"test/aoj_grl_1_a.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A\"\
+  bundledCode: "#line 1 \"aizu/grl_1_a.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_A\"\
     \n\n#include <iostream>\n#line 1 \"graph/dijkstra.cpp\"\n/**\n * @brief \u5358\
     \u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Dijkstra\uFF09\n * @author\
     \ hasegawa1\n */\n\n#include <vector>\n#include <queue>\n#include <functional>\n\
@@ -30,8 +30,8 @@ data:
     \            if(cost2 == unreachable) continue;\n            T next_cost = cost\
     \ + cost2;\n            if(dist[u] != unreachable && dist[u] <= next_cost) continue;\n\
     \            dist[u] = next_cost;\n            pq.emplace(next_cost, u);\n   \
-    \     }\n    }\n\n    return dist;\n}\n#line 5 \"test/aoj_grl_1_a.test.cpp\"\n\
-    \nusing namespace std;\n\ntemplate<typename T>\nusing WeightedGraph = std::vector<std::vector<std::pair<int,T>>>;\n\
+    \     }\n    }\n\n    return dist;\n}\n#line 5 \"aizu/grl_1_a.test.cpp\"\n\nusing\
+    \ namespace std;\n\ntemplate<typename T>\nusing WeightedGraph = std::vector<std::vector<std::pair<int,T>>>;\n\
     \nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
     \n    int V, E, r;\n    cin >> V >> E >> r;\n\n    WeightedGraph<int64_t> g(V);\n\
     \    for(int i=0; i<E; i++) {\n        int s, t, d;\n        cin >> s >> t >>\
@@ -50,15 +50,15 @@ data:
   dependsOn:
   - graph/dijkstra.cpp
   isVerificationFile: true
-  path: test/aoj_grl_1_a.test.cpp
+  path: aizu/grl_1_a.test.cpp
   requiredBy: []
-  timestamp: '2021-06-27 23:17:32+09:00'
+  timestamp: '2021-06-29 19:12:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj_grl_1_a.test.cpp
+documentation_of: aizu/grl_1_a.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj_grl_1_a.test.cpp
-- /verify/test/aoj_grl_1_a.test.cpp.html
-title: test/aoj_grl_1_a.test.cpp
+- /verify/aizu/grl_1_a.test.cpp
+- /verify/aizu/grl_1_a.test.cpp.html
+title: aizu/grl_1_a.test.cpp
 ---

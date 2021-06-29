@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj_alds1_15_c.test.cpp
-    title: test/aoj_alds1_15_c.test.cpp
+    path: aizu/alds1_15_c.test.cpp
+    title: aizu/alds1_15_c.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -41,7 +41,7 @@ data:
   timestamp: '2021-06-28 15:47:17+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj_alds1_15_c.test.cpp
+  - aizu/alds1_15_c.test.cpp
 documentation_of: other/schedule_intervals.cpp
 layout: document
 redirect_from:

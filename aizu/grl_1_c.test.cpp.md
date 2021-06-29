@@ -14,7 +14,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C
-  bundledCode: "#line 1 \"test/aoj_grl_1_c.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C\"\
+  bundledCode: "#line 1 \"aizu/grl_1_c.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_1_C\"\
     \n\n#include <iostream>\n#include <algorithm>\n#line 1 \"graph/warshall_floyd.cpp\"\
     \n/**\n * @brief \u5168\u70B9\u5BFE\u9593\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08\
     Warshall Floyd\uFF09\n * @author hasegawa1\n */\n\n#include <vector>\n#include\
@@ -27,8 +27,8 @@ data:
     \ continue;\n                if(dist[i][j] == unreachable) dist[i][j] = dist[i][k]\
     \ + dist[k][j];\n                else dist[i][j] = std::min(dist[i][j], dist[i][k]\
     \ + dist[k][j]);\n            }\n        }\n    }\n\n    return dist;\n}\n#line\
-    \ 6 \"test/aoj_grl_1_c.test.cpp\"\n\nusing namespace std;\n\nint main(void) {\n\
-    \    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\n    int V, E;\n\
+    \ 6 \"aizu/grl_1_c.test.cpp\"\n\nusing namespace std;\n\nint main(void) {\n  \
+    \  cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\n    int V, E;\n\
     \    cin >> V >> E;\n    vector<vector<int>> g(V, vector<int>(V, numeric_limits<int>::max()));\n\
     \    for(int i=0; i<V; i++) {\n        g[i][i] = 0;\n    }\n    for(int i=0; i<E;\
     \ i++) {\n        int s, t, d;\n        cin >> s >> t >> d;\n        g[s][t] =\
@@ -55,15 +55,15 @@ data:
   dependsOn:
   - graph/warshall_floyd.cpp
   isVerificationFile: true
-  path: test/aoj_grl_1_c.test.cpp
+  path: aizu/grl_1_c.test.cpp
   requiredBy: []
-  timestamp: '2021-06-27 23:17:32+09:00'
+  timestamp: '2021-06-29 19:12:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj_grl_1_c.test.cpp
+documentation_of: aizu/grl_1_c.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj_grl_1_c.test.cpp
-- /verify/test/aoj_grl_1_c.test.cpp.html
-title: test/aoj_grl_1_c.test.cpp
+- /verify/aizu/grl_1_c.test.cpp
+- /verify/aizu/grl_1_c.test.cpp.html
+title: aizu/grl_1_c.test.cpp
 ---

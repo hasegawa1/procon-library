@@ -15,7 +15,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_2_A
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_2_A
-  bundledCode: "#line 1 \"test/aoj_dpl_2_a.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_2_A\"\
+  bundledCode: "#line 1 \"aizu/dpl_2_a.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/7/DPL/all/DPL_2_A\"\
     \n\n#include <iostream>\n#line 1 \"graph/shortest_hamilton_cycle.cpp\"\n/**\n\
     \ * @brief \u6700\u77ED\u30CF\u30DF\u30EB\u30C8\u30F3\u9589\u8DEF\uFF08TSP: Traveling\
     \ Salesman Problem\uFF09\n * @author hasegawa1\n */\n\n#include <vector>\n\ntemplate<typename\
@@ -29,7 +29,7 @@ data:
     \ dist[bit | 1<<u][u] = dist[bit][v] + adjacency_matrix[v][u];\n             \
     \   dist[bit | 1<<u][u] = std::min(dist[bit | 1<<u][u], dist[bit][v] + adjacency_matrix[v][u]);\n\
     \            }\n        }\n    }\n\n    return dist.back()[0];\n}\n#line 5 \"\
-    test/aoj_dpl_2_a.test.cpp\"\n\nusing namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n\
+    aizu/dpl_2_a.test.cpp\"\n\nusing namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n\
     \    ios_base::sync_with_stdio(false);\n\n    int V, E;\n    cin >> V >> E;\n\
     \    vector<vector<int>> g(V, vector<int>(V, -1));\n    for(int i=0; i<E; i++)\
     \ {\n        int s, t, d;\n        cin >> s >> t >> d;\n        g[s][t] = d;\n\
@@ -44,15 +44,15 @@ data:
   dependsOn:
   - graph/shortest_hamilton_cycle.cpp
   isVerificationFile: true
-  path: test/aoj_dpl_2_a.test.cpp
+  path: aizu/dpl_2_a.test.cpp
   requiredBy: []
-  timestamp: '2021-06-28 01:43:05+09:00'
+  timestamp: '2021-06-29 19:12:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj_dpl_2_a.test.cpp
+documentation_of: aizu/dpl_2_a.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj_dpl_2_a.test.cpp
-- /verify/test/aoj_dpl_2_a.test.cpp.html
-title: test/aoj_dpl_2_a.test.cpp
+- /verify/aizu/dpl_2_a.test.cpp
+- /verify/aizu/dpl_2_a.test.cpp.html
+title: aizu/dpl_2_a.test.cpp
 ---

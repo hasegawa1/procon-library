@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/aizu/dpl_3_c.test.cpp
-    title: test/aizu/dpl_3_c.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     document_title: "\u30D2\u30B9\u30C8\u30B0\u30E9\u30E0\u4E2D\u306E\u6700\u5927\u9577\
       \u65B9\u5F62\u306E\u9762\u7A4D"
@@ -39,9 +36,8 @@ data:
   path: dp/largest_rectangle_in_a_histogram.cpp
   requiredBy: []
   timestamp: '2021-06-28 19:51:07+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/aizu/dpl_3_c.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: dp/largest_rectangle_in_a_histogram.cpp
 layout: document
 redirect_from:

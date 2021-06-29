@@ -2,13 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: test/yosupo/static_range_sum.test.cpp
-    title: test/yosupo/static_range_sum.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     document_title: "1\u6B21\u5143\u7D2F\u7A4D\u548C"
     links: []
@@ -34,9 +31,8 @@ data:
   path: other/CumulativeSum.cpp
   requiredBy: []
   timestamp: '2021-06-28 16:51:06+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - test/yosupo/static_range_sum.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: other/CumulativeSum.cpp
 layout: document
 redirect_from:

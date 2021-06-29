@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aoj_dpl_1_e.test.cpp
-    title: test/aoj_dpl_1_e.test.cpp
+    path: aizu/dpl_1_e.test.cpp
+    title: aizu/dpl_1_e.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -37,7 +37,7 @@ data:
   timestamp: '2021-06-28 01:35:33+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aoj_dpl_1_e.test.cpp
+  - aizu/dpl_1_e.test.cpp
 documentation_of: dp/edit_distance.cpp
 layout: document
 redirect_from:

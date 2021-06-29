@@ -14,7 +14,7 @@ data:
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_11_C
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_11_C
-  bundledCode: "#line 1 \"test/aoj_alds1_11_c.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_11_C\"\
+  bundledCode: "#line 1 \"aizu/alds1_11_c.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_11_C\"\
     \n\n#include <iostream>\n#line 1 \"graph/breadth_first_search.cpp\"\n/**\n * @brief\
     \ \u5E45\u512A\u5148\u63A2\u7D22\uFF08BFS: Breadth First Search\uFF09\n * @author\
     \ hasegawa1\n */\n\n#include <vector>\n#include <queue>\n\nstd::vector<int> bfs(const\
@@ -24,8 +24,8 @@ data:
     \ {\n        const auto v = q.front(); q.pop();\n        for(const auto u: adjacency_list[v])\
     \ {\n            if(dist[u] != unreachable) continue;\n            dist[u] = dist[v]\
     \ + 1;\n            q.emplace(u);\n        }\n    }\n\n    return dist;\n}\n#line\
-    \ 5 \"test/aoj_alds1_11_c.test.cpp\"\n\nusing namespace std;\n\nint main(void)\
-    \ {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\n    int n;\n\
+    \ 5 \"aizu/alds1_11_c.test.cpp\"\n\nusing namespace std;\n\nint main(void) {\n\
+    \    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\n    int n;\n\
     \    cin >> n;\n    vector<vector<int>> g(n);\n    for(int i=0; i<n; i++) {\n\
     \        int v, k;\n        cin >> v >> k;\n        --v;\n        for(int j=0;\
     \ j<k; j++) {\n            int u;\n            cin >> u;\n            --u;\n \
@@ -44,15 +44,15 @@ data:
   dependsOn:
   - graph/breadth_first_search.cpp
   isVerificationFile: true
-  path: test/aoj_alds1_11_c.test.cpp
+  path: aizu/alds1_11_c.test.cpp
   requiredBy: []
-  timestamp: '2021-06-28 02:10:57+09:00'
+  timestamp: '2021-06-29 19:12:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: test/aoj_alds1_11_c.test.cpp
+documentation_of: aizu/alds1_11_c.test.cpp
 layout: document
 redirect_from:
-- /verify/test/aoj_alds1_11_c.test.cpp
-- /verify/test/aoj_alds1_11_c.test.cpp.html
-title: test/aoj_alds1_11_c.test.cpp
+- /verify/aizu/alds1_11_c.test.cpp
+- /verify/aizu/alds1_11_c.test.cpp.html
+title: aizu/alds1_11_c.test.cpp
 ---

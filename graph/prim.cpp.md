@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: test/aizu/grl_2_a.prim.test.cpp
-    title: test/aizu/grl_2_a.prim.test.cpp
+    path: aizu/grl_2_a_prim.test.cpp
+    title: aizu/grl_2_a_prim.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -43,7 +43,7 @@ data:
   timestamp: '2021-06-29 19:04:00+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - test/aizu/grl_2_a.prim.test.cpp
+  - aizu/grl_2_a_prim.test.cpp
 documentation_of: graph/prim.cpp
 layout: document
 redirect_from:
