@@ -41,6 +41,9 @@ data:
       title: "\u6700\u77ED\u30CF\u30DF\u30EB\u30C8\u30F3\u9589\u8DEF\uFF08TSP: Traveling\
         \ Salesman Problem\uFF09"
     - icon: ':heavy_check_mark:'
+      path: graph/topological_sort.cpp
+      title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
+    - icon: ':heavy_check_mark:'
       path: graph/warshall_floyd.cpp
       title: "\u5168\u70B9\u5BFE\u9593\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Warshall\
         \ Floyd\uFF09"
@@ -111,6 +114,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/grl_2_a_prim.test.cpp
       title: aizu/grl_2_a_prim.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/grl_4_a.test.cpp
+      title: aizu/grl_4_a.test.cpp
     - icon: ':heavy_check_mark:'
       path: aizu/ntl_1_a.test.cpp
       title: aizu/ntl_1_a.test.cpp
