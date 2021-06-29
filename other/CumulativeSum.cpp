@@ -19,7 +19,7 @@ public:
     }
 
     // [l, r)
-    T operator()(int l, int r) {
+    T operator()(int l, int r) const {
         assert(0 <= l && r <= _n);
         return _cumulative_sum[r] - _cumulative_sum[l];
     }
