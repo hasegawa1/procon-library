@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <vector>
-#include "../../dp/largest_rectangle_in_a_histogram.cpp"
+#include "../dp/largest_rectangle_in_a_histogram.cpp"
 
 using namespace std;
 

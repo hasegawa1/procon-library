@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/static_range_sum"
 
 #include <iostream>
-#include "../../other/CumulativeSum.cpp"
+#include "../other/CumulativeSum.cpp"
 
 using namespace std;
 

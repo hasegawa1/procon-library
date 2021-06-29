@@ -1,8 +1,8 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_5_D"
 
 #include <iostream>
-#include "../../other/Compress.cpp"
-#include "../../other/inversion_number.cpp"
+#include "../other/Compress.cpp"
+#include "../other/inversion_number.cpp"
 
 using namespace std;
 

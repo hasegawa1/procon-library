@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <vector>
-#include "../../other/CumulativeSum2.cpp"
+#include "../other/CumulativeSum2.cpp"
 
 using namespace std;
 
