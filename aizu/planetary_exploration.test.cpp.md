@@ -25,9 +25,9 @@ data:
     \ {\n        for(int i=0; i<_h; i++) {\n            for(int j=0; j<_w; j++) {\n\
     \                _cumulative_sum2[i+1][j+1] = _cumulative_sum2[i][j+1] + _cumulative_sum2[i+1][j]\
     \ - _cumulative_sum2[i][j] + grid[i][j];\n            }\n        }\n    }\n\n\
-    \    // [si, sj) x [gi, gj)\n    T operator()(int si, int sj, int gi, int gj)\
-    \ {\n        assert(0 <= si && si < gi && gi <= _h);\n        assert(0 <= sj &&\
-    \ sj < gj && gj <= _w);\n        return _cumulative_sum2[gi][gj] - _cumulative_sum2[si][gj]\
+    \    // [si, gi) x [sj, gj)\n    T operator()(int si, int sj, int gi, int gj)\
+    \ const {\n        assert(0 <= si && si < gi && gi <= _h);\n        assert(0 <=\
+    \ sj && sj < gj && gj <= _w);\n        return _cumulative_sum2[gi][gj] - _cumulative_sum2[si][gj]\
     \ - _cumulative_sum2[gi][sj] + _cumulative_sum2[si][sj];\n    }\n};\n#line 6 \"\
     aizu/planetary_exploration.test.cpp\"\n\nusing namespace std;\n\nint main(void)\
     \ {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\n    int M,\
@@ -57,7 +57,7 @@ data:
   isVerificationFile: true
   path: aizu/planetary_exploration.test.cpp
   requiredBy: []
-  timestamp: '2021-06-29 19:20:38+09:00'
+  timestamp: '2021-06-30 00:48:20+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: aizu/planetary_exploration.test.cpp

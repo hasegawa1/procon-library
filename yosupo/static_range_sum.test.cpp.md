@@ -22,13 +22,14 @@ data:
     \  explicit CumulativeSum(const std::vector<T> & v): _n(v.size()), _cumulative_sum(v)\
     \ {\n        _cumulative_sum.emplace_back(T());\n        std::exclusive_scan(_cumulative_sum.begin(),\
     \ _cumulative_sum.end(), _cumulative_sum.begin(), T());\n    }\n\n    // [l, r)\n\
-    \    T operator()(int l, int r) {\n        assert(0 <= l && r <= _n);\n      \
-    \  return _cumulative_sum[r] - _cumulative_sum[l];\n    }\n};\n#line 5 \"yosupo/static_range_sum.test.cpp\"\
-    \n\nusing namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
-    \n    int N, Q;\n    cin >> N >> Q;\n    vector<int64_t> a(N);\n    for(int i=0;\
-    \ i<N; i++) {\n        cin >> a[i];\n    }\n\n    CumulativeSum asum(a);\n\n \
-    \   while(Q--) {\n        int l, r;\n        cin >> l >> r;\n        cout << asum(l,\
-    \ r) << endl;\n    }\n}\n"
+    \    T operator()(int l, int r) const {\n        assert(0 <= l && r <= _n);\n\
+    \        return _cumulative_sum[r] - _cumulative_sum[l];\n    }\n};\n#line 5 \"\
+    yosupo/static_range_sum.test.cpp\"\n\nusing namespace std;\n\nint main(void) {\n\
+    \    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\n    int N, Q;\n\
+    \    cin >> N >> Q;\n    vector<int64_t> a(N);\n    for(int i=0; i<N; i++) {\n\
+    \        cin >> a[i];\n    }\n\n    CumulativeSum asum(a);\n\n    while(Q--) {\n\
+    \        int l, r;\n        cin >> l >> r;\n        cout << asum(l, r) << endl;\n\
+    \    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/static_range_sum\"\n\n\
     #include <iostream>\n#include \"../other/CumulativeSum.cpp\"\n\nusing namespace\
     \ std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
@@ -41,7 +42,7 @@ data:
   isVerificationFile: true
   path: yosupo/static_range_sum.test.cpp
   requiredBy: []
-  timestamp: '2021-06-29 19:20:38+09:00'
+  timestamp: '2021-06-30 00:48:08+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: yosupo/static_range_sum.test.cpp

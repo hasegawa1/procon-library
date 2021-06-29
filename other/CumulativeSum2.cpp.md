@@ -20,9 +20,9 @@ data:
     \ std::vector<T>(_w+1)) {\n        for(int i=0; i<_h; i++) {\n            for(int\
     \ j=0; j<_w; j++) {\n                _cumulative_sum2[i+1][j+1] = _cumulative_sum2[i][j+1]\
     \ + _cumulative_sum2[i+1][j] - _cumulative_sum2[i][j] + grid[i][j];\n        \
-    \    }\n        }\n    }\n\n    // [si, sj) x [gi, gj)\n    T operator()(int si,\
-    \ int sj, int gi, int gj) {\n        assert(0 <= si && si < gi && gi <= _h);\n\
-    \        assert(0 <= sj && sj < gj && gj <= _w);\n        return _cumulative_sum2[gi][gj]\
+    \    }\n        }\n    }\n\n    // [si, gi) x [sj, gj)\n    T operator()(int si,\
+    \ int sj, int gi, int gj) const {\n        assert(0 <= si && si < gi && gi <=\
+    \ _h);\n        assert(0 <= sj && sj < gj && gj <= _w);\n        return _cumulative_sum2[gi][gj]\
     \ - _cumulative_sum2[si][gj] - _cumulative_sum2[gi][sj] + _cumulative_sum2[si][sj];\n\
     \    }\n};\n"
   code: "/**\n * @brief 2\u6B21\u5143\u7D2F\u7A4D\u548C\n * @author hasegawa1\n */\n\
@@ -33,15 +33,15 @@ data:
     \ {\n        for(int i=0; i<_h; i++) {\n            for(int j=0; j<_w; j++) {\n\
     \                _cumulative_sum2[i+1][j+1] = _cumulative_sum2[i][j+1] + _cumulative_sum2[i+1][j]\
     \ - _cumulative_sum2[i][j] + grid[i][j];\n            }\n        }\n    }\n\n\
-    \    // [si, sj) x [gi, gj)\n    T operator()(int si, int sj, int gi, int gj)\
-    \ {\n        assert(0 <= si && si < gi && gi <= _h);\n        assert(0 <= sj &&\
-    \ sj < gj && gj <= _w);\n        return _cumulative_sum2[gi][gj] - _cumulative_sum2[si][gj]\
+    \    // [si, gi) x [sj, gj)\n    T operator()(int si, int sj, int gi, int gj)\
+    \ const {\n        assert(0 <= si && si < gi && gi <= _h);\n        assert(0 <=\
+    \ sj && sj < gj && gj <= _w);\n        return _cumulative_sum2[gi][gj] - _cumulative_sum2[si][gj]\
     \ - _cumulative_sum2[gi][sj] + _cumulative_sum2[si][sj];\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: other/CumulativeSum2.cpp
   requiredBy: []
-  timestamp: '2021-06-28 17:26:15+09:00'
+  timestamp: '2021-06-30 00:48:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - aizu/planetary_exploration.test.cpp
