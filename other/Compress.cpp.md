@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: aizu/alds1_5_d.test.cpp
+    title: aizu/alds1_5_d.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u5EA7\u6A19\u5727\u7E2E"
     links: []
@@ -57,8 +60,9 @@ data:
   path: other/Compress.cpp
   requiredBy: []
   timestamp: '2021-06-28 23:50:19+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - aizu/alds1_5_d.test.cpp
 documentation_of: other/Compress.cpp
 layout: document
 redirect_from:
