@@ -12,12 +12,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: aizu/ntl_1_d.test.cpp
     title: aizu/ntl_1_d.test.cpp
-  - icon: ':x:'
-    path: yosupo/enumerate_primes.test.cpp
-    title: yosupo/enumerate_primes.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     document_title: "\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9"
     links: []
@@ -110,9 +107,8 @@ data:
   path: number-theory/Sieve.cpp
   requiredBy: []
   timestamp: '2021-06-30 00:07:55+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - yosupo/enumerate_primes.test.cpp
   - aizu/ntl_1_a.test.cpp
   - aizu/ntl_1_d.test.cpp
   - aizu/alds1_1_c.test.cpp

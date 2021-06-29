@@ -46,7 +46,7 @@ data:
         \ Floyd\uFF09"
   - name: number-theory
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: number-theory/Sieve.cpp
       title: "\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9"
   - name: other
@@ -122,9 +122,6 @@ data:
       title: aizu/planetary_exploration.test.cpp
   - name: yosupo
     pages:
-    - icon: ':x:'
-      path: yosupo/enumerate_primes.test.cpp
-      title: yosupo/enumerate_primes.test.cpp
     - icon: ':heavy_check_mark:'
       path: yosupo/static_range_sum.test.cpp
       title: yosupo/static_range_sum.test.cpp
