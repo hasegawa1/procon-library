@@ -44,6 +44,11 @@ data:
       path: graph/warshall_floyd.cpp
       title: "\u5168\u70B9\u5BFE\u9593\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Warshall\
         \ Floyd\uFF09"
+  - name: number-theory
+    pages:
+    - icon: ':question:'
+      path: number-theory/Sieve.cpp
+      title: "\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9"
   - name: other
     pages:
     - icon: ':heavy_check_mark:'
@@ -73,6 +78,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/alds1_15_c.test.cpp
       title: aizu/alds1_15_c.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/alds1_1_c.test.cpp
+      title: aizu/alds1_1_c.test.cpp
     - icon: ':heavy_check_mark:'
       path: aizu/alds1_5_d.test.cpp
       title: aizu/alds1_5_d.test.cpp
@@ -104,10 +112,19 @@ data:
       path: aizu/grl_2_a_prim.test.cpp
       title: aizu/grl_2_a_prim.test.cpp
     - icon: ':heavy_check_mark:'
+      path: aizu/ntl_1_a.test.cpp
+      title: aizu/ntl_1_a.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/ntl_1_d.test.cpp
+      title: aizu/ntl_1_d.test.cpp
+    - icon: ':heavy_check_mark:'
       path: aizu/planetary_exploration.test.cpp
       title: aizu/planetary_exploration.test.cpp
   - name: yosupo
     pages:
+    - icon: ':x:'
+      path: yosupo/enumerate_primes.test.cpp
+      title: yosupo/enumerate_primes.test.cpp
     - icon: ':heavy_check_mark:'
       path: yosupo/static_range_sum.test.cpp
       title: yosupo/static_range_sum.test.cpp
