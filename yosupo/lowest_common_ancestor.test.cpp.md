@@ -49,9 +49,17 @@ data:
     \ i>=0; i--) {\n            if(_doubling[i][v] != _doubling[i][u]) {\n       \
     \         v = _doubling[i][v];\n                u = _doubling[i][u];\n       \
     \     }\n        }\n        return _doubling[0][v];\n    }\n\n    int operator()(int\
-    \ v, int u) const {\n        return lowest_common_ancestor(v, u);\n    }\n};\n\
-    #line 6 \"yosupo/lowest_common_ancestor.test.cpp\"\n\nusing namespace std;\n\n\
-    int main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
+    \ v, int u) const {\n        return lowest_common_ancestor(v, u);\n    }\n\n \
+    \   // unverified\n    // int size() const {\n    //     return _n;\n    // }\n\
+    \n    // unverified\n    // int root() const {\n    //     return _root;\n   \
+    \ // }\n\n    // unverified\n    // int parent(int v) const {\n    //     return\
+    \ ancestor(v, 1);\n    // }\n\n    // unverified\n    // int depth(int v) const\
+    \ {\n    //     return _depth[v];\n    // }\n\n    // unverified\n    // int distance(int\
+    \ v, int u) const {\n    //     return _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v,\
+    \ u)];\n    // }\n\n    // unverified\n    // bool is_on_path(int v, int u, int\
+    \ x) const {\n    //     return (distance(v, x) + distance(u, x) == distance(v,\
+    \ u));\n    // }\n};\n#line 6 \"yosupo/lowest_common_ancestor.test.cpp\"\n\nusing\
+    \ namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
     \n    int N, Q;\n    cin >> N >> Q;\n    vector<vector<int>> g(N);\n    for(int\
     \ i=1; i<N; i++) {\n        int p;\n        cin >> p;\n        g[p].emplace_back(i);\n\
     \    }\n\n    LowestCommonAncestor lca(g, 0);\n\n    while(Q--) {\n        int\
@@ -68,7 +76,7 @@ data:
   isVerificationFile: true
   path: yosupo/lowest_common_ancestor.test.cpp
   requiredBy: []
-  timestamp: '2021-07-02 00:05:14+09:00'
+  timestamp: '2021-07-02 00:25:49+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: yosupo/lowest_common_ancestor.test.cpp
