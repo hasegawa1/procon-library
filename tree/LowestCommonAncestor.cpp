@@ -84,4 +84,34 @@ public:
     int operator()(int v, int u) const {
         return lowest_common_ancestor(v, u);
     }
+
+    // unverified
+    // int size() const {
+    //     return _n;
+    // }
+
+    // unverified
+    // int root() const {
+    //     return _root;
+    // }
+
+    // unverified
+    // int parent(int v) const {
+    //     return ancestor(v, 1);
+    // }
+
+    // unverified
+    // int depth(int v) const {
+    //     return _depth[v];
+    // }
+
+    // unverified
+    // int distance(int v, int u) const {
+    //     return _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v, u)];
+    // }
+
+    // unverified
+    // bool is_on_path(int v, int u, int x) const {
+    //     return (distance(v, x) + distance(u, x) == distance(v, u));
+    // }
 };
