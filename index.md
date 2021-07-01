@@ -69,6 +69,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/schedule_intervals.cpp
       title: "\u533A\u9593\u30B9\u30B1\u30B8\u30E5\u30FC\u30EA\u30F3\u30B0\u554F\u984C"
+  - name: tree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: tree/LowestCommonAncestor.cpp
+      title: "\u6700\u5C0F\u5171\u901A\u7956\u5148\uFF08LCA: Lowest Common Ancestor\uFF09"
   verificationCategories:
   - name: aizu
     pages:
@@ -118,6 +123,9 @@ data:
       path: aizu/grl_4_a.test.cpp
       title: aizu/grl_4_a.test.cpp
     - icon: ':heavy_check_mark:'
+      path: aizu/grl_5_c.test.cpp
+      title: aizu/grl_5_c.test.cpp
+    - icon: ':heavy_check_mark:'
       path: aizu/ntl_1_a.test.cpp
       title: aizu/ntl_1_a.test.cpp
     - icon: ':heavy_check_mark:'
@@ -128,6 +136,9 @@ data:
       title: aizu/planetary_exploration.test.cpp
   - name: yosupo
     pages:
+    - icon: ':heavy_check_mark:'
+      path: yosupo/lowest_common_ancestor.test.cpp
+      title: yosupo/lowest_common_ancestor.test.cpp
     - icon: ':heavy_check_mark:'
       path: yosupo/static_range_sum.test.cpp
       title: yosupo/static_range_sum.test.cpp
