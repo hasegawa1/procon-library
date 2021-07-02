@@ -8,6 +8,8 @@
 "aizu/dpl_1_e.test.cpp": "2021-06-29 19:12:26 +0900",
 "aizu/dpl_2_a.test.cpp": "2021-06-29 19:12:26 +0900",
 "aizu/dpl_3_c.test.cpp": "2021-06-29 19:20:38 +0900",
+"aizu/dsl_5_a.test.cpp": "2021-07-02 23:09:47 +0900",
+"aizu/dsl_5_b.test.cpp": "2021-07-02 23:27:50 +0900",
 "aizu/grl_1_a.test.cpp": "2021-06-29 19:12:26 +0900",
 "aizu/grl_1_b.test.cpp": "2021-06-29 19:12:26 +0900",
 "aizu/grl_1_c.test.cpp": "2021-06-29 19:12:26 +0900",
@@ -19,5 +21,5 @@
 "aizu/ntl_1_d.test.cpp": "2021-06-30 00:07:55 +0900",
 "aizu/planetary_exploration.test.cpp": "2021-06-30 00:48:20 +0900",
 "yosupo/lowest_common_ancestor.test.cpp": "2021-07-02 00:25:49 +0900",
-"yosupo/static_range_sum.test.cpp": "2021-06-30 00:48:08 +0900"
+"yosupo/static_range_sum.test.cpp": "2021-07-02 22:47:41 +0900"
 }
