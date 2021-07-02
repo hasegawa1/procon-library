@@ -64,6 +64,12 @@ data:
       path: other/CumulativeSum2.cpp
       title: "2\u6B21\u5143\u7D2F\u7A4D\u548C"
     - icon: ':heavy_check_mark:'
+      path: other/Imos.cpp
+      title: "1\u6B21\u5143imos\u6CD5"
+    - icon: ':heavy_check_mark:'
+      path: other/Imos2.cpp
+      title: "2\u6B21\u5143imos\u6CD5"
+    - icon: ':heavy_check_mark:'
       path: other/inversion_number.cpp
       title: "\u8EE2\u5012\u6570"
     - icon: ':heavy_check_mark:'
@@ -104,6 +110,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/dpl_3_c.test.cpp
       title: aizu/dpl_3_c.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/dsl_5_a.test.cpp
+      title: aizu/dsl_5_a.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/dsl_5_b.test.cpp
+      title: aizu/dsl_5_b.test.cpp
     - icon: ':heavy_check_mark:'
       path: aizu/grl_1_a.test.cpp
       title: aizu/grl_1_a.test.cpp
