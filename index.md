@@ -1,6 +1,11 @@
 ---
 data:
   libraryCategories:
+  - name: combinatorics
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: combinatorics/Combinatorics.cpp
+      title: "\u7D44\u307F\u5408\u308F\u305B\u5404\u7A2E"
   - name: dp
     pages:
     - icon: ':heavy_check_mark:'
@@ -110,6 +115,27 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/dpl_3_c.test.cpp
       title: aizu/dpl_3_c.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/dpl_5_b.test.cpp
+      title: aizu/dpl_5_b.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/dpl_5_c.test.cpp
+      title: aizu/dpl_5_c.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/dpl_5_d.test.cpp
+      title: aizu/dpl_5_d.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/dpl_5_e.test.cpp
+      title: aizu/dpl_5_e.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/dpl_5_f.test.cpp
+      title: aizu/dpl_5_f.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/dpl_5_g.test.cpp
+      title: aizu/dpl_5_g.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/dpl_5_i.test.cpp
+      title: aizu/dpl_5_i.test.cpp
     - icon: ':heavy_check_mark:'
       path: aizu/dsl_5_a.test.cpp
       title: aizu/dsl_5_a.test.cpp
