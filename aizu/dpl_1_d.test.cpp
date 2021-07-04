@@ -16,5 +16,5 @@ int main(void) {
         cin >> a[i];
     }
 
-    cout << longest_increasing_subsequence(a, true).size() << endl;
+    cout << longest_increasing_subsequence(a, true) << endl;
 }
