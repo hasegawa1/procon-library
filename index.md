@@ -12,6 +12,10 @@ data:
       path: dp/edit_distance.cpp
       title: "\u7DE8\u96C6\u8DDD\u96E2"
     - icon: ':heavy_check_mark:'
+      path: dp/knapsack_without_limitation.cpp
+      title: "\u500B\u6570\u5236\u9650\u306A\u3057\u30CA\u30C3\u30D7\u30B5\u30C3\u30AF\
+        \u554F\u984C"
+    - icon: ':heavy_check_mark:'
       path: dp/largest_rectangle_in_a_histogram.cpp
       title: "\u30D2\u30B9\u30C8\u30B0\u30E9\u30E0\u4E2D\u306E\u6700\u5927\u9577\u65B9\
         \u5F62\u306E\u9762\u7A4D"
@@ -103,6 +107,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/alds1_5_d.test.cpp
       title: aizu/alds1_5_d.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/dpl_1_c.test.cpp
+      title: aizu/dpl_1_c.test.cpp
     - icon: ':heavy_check_mark:'
       path: aizu/dpl_1_d.test.cpp
       title: aizu/dpl_1_d.test.cpp
