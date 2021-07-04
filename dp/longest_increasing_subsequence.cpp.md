@@ -16,24 +16,24 @@ data:
   bundledCode: "#line 1 \"dp/longest_increasing_subsequence.cpp\"\n/**\n * @brief\
     \ \u6700\u9577\u5897\u52A0\u90E8\u5206\u5217\uFF08LIS: Longest Increasing Subsequence\uFF09\
     \n * @author hasegawa1\n */\n\n#include <vector>\n#include <algorithm>\n\ntemplate<typename\
-    \ T>\nstd::vector<T> longest_increasing_subsequence(const std::vector<T> &v, bool\
-    \ strict) {\n    std::vector<T> lis;\n    lis.reserve(v.size());\n    for(auto\
-    \ e: v) {\n        auto itr = strict ? std::lower_bound(lis.begin(), lis.end(),\
-    \ e) : std::upper_bound(lis.begin(), lis.end(), e);\n        if(itr == lis.end())\
-    \ lis.emplace_back(e);\n        else *itr = e;\n    }\n    return lis;\n}\n"
+    \ T>\nT longest_increasing_subsequence(const std::vector<T> &v, bool strict) {\n\
+    \    std::vector<T> lis;\n    lis.reserve(v.size());\n    for(auto e: v) {\n \
+    \       auto itr = strict ? std::lower_bound(lis.begin(), lis.end(), e) : std::upper_bound(lis.begin(),\
+    \ lis.end(), e);\n        if(itr == lis.end()) lis.emplace_back(e);\n        else\
+    \ *itr = e;\n    }\n    return lis.size();\n}\n"
   code: "/**\n * @brief \u6700\u9577\u5897\u52A0\u90E8\u5206\u5217\uFF08LIS: Longest\
     \ Increasing Subsequence\uFF09\n * @author hasegawa1\n */\n\n#include <vector>\n\
-    #include <algorithm>\n\ntemplate<typename T>\nstd::vector<T> longest_increasing_subsequence(const\
+    #include <algorithm>\n\ntemplate<typename T>\nT longest_increasing_subsequence(const\
     \ std::vector<T> &v, bool strict) {\n    std::vector<T> lis;\n    lis.reserve(v.size());\n\
     \    for(auto e: v) {\n        auto itr = strict ? std::lower_bound(lis.begin(),\
     \ lis.end(), e) : std::upper_bound(lis.begin(), lis.end(), e);\n        if(itr\
     \ == lis.end()) lis.emplace_back(e);\n        else *itr = e;\n    }\n    return\
-    \ lis;\n}\n"
+    \ lis.size();\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: dp/longest_increasing_subsequence.cpp
   requiredBy: []
-  timestamp: '2021-06-28 00:36:18+09:00'
+  timestamp: '2021-07-04 19:27:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - aizu/dpl_1_d.test.cpp
