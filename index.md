@@ -37,6 +37,9 @@ data:
       path: graph/breadth_first_search.cpp
       title: "\u5E45\u512A\u5148\u63A2\u7D22\uFF08BFS: Breadth First Search\uFF09"
     - icon: ':heavy_check_mark:'
+      path: graph/diameter.cpp
+      title: "\u6728\u306E\u76F4\u5F84"
+    - icon: ':heavy_check_mark:'
       path: graph/dijkstra.cpp
       title: "\u5358\u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Dijkstra\uFF09"
     - icon: ':heavy_check_mark:'
@@ -167,6 +170,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/grl_4_a.test.cpp
       title: aizu/grl_4_a.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/grl_5_a.test.cpp
+      title: aizu/grl_5_a.test.cpp
     - icon: ':heavy_check_mark:'
       path: aizu/grl_5_c.test.cpp
       title: aizu/grl_5_c.test.cpp
