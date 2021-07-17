@@ -6,9 +6,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: aizu/alds1_11_c.test.cpp
     title: aizu/alds1_11_c.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: aizu/grl_5_a.test.cpp
-    title: aizu/grl_5_a.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -40,7 +37,6 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - aizu/alds1_11_c.test.cpp
-  - aizu/grl_5_a.test.cpp
 documentation_of: graph/breadth_first_search.cpp
 layout: document
 redirect_from:
