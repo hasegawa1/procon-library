@@ -6,6 +6,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: aizu/grl_1_a.test.cpp
     title: aizu/grl_1_a.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: aizu/grl_5_a.test.cpp
+    title: aizu/grl_5_a.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -52,6 +55,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - aizu/grl_1_a.test.cpp
+  - aizu/grl_5_a.test.cpp
 documentation_of: graph/dijkstra.cpp
 layout: document
 redirect_from:

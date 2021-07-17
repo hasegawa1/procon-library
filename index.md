@@ -89,6 +89,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: tree/LowestCommonAncestor.cpp
       title: "\u6700\u5C0F\u5171\u901A\u7956\u5148\uFF08LCA: Lowest Common Ancestor\uFF09"
+    - icon: ':heavy_check_mark:'
+      path: tree/diameter.cpp
+      title: "\u6728\u306E\u76F4\u5F84"
   verificationCategories:
   - name: aizu
     pages:
@@ -167,7 +170,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/grl_4_a.test.cpp
       title: aizu/grl_4_a.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: aizu/grl_5_a.test.cpp
       title: aizu/grl_5_a.test.cpp
     - icon: ':heavy_check_mark:'
