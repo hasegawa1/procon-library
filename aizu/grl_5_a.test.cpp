@@ -3,7 +3,7 @@
 #include <iostream>
 #include "../graph/breadth_first_search.cpp"
 #include "../graph/dijkstra.cpp"
-#include "../graph/diameter.cpp"
+#include "../tree/diameter.cpp"
 
 using namespace std;
 
