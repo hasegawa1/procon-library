@@ -72,6 +72,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/CumulativeSum2.cpp
       title: "2\u6B21\u5143\u7D2F\u7A4D\u548C"
+    - icon: ':warning:'
+      path: other/Doubling.cpp
+      title: "\u30C0\u30D6\u30EA\u30F3\u30B0"
     - icon: ':heavy_check_mark:'
       path: other/Imos.cpp
       title: "1\u6B21\u5143imos\u6CD5"
