@@ -23,8 +23,10 @@ data:
     \ [](auto &lhs, auto &rhs) {\n        return std::get<2>(lhs) < std::get<2>(rhs);\n\
     \    });\n\n    atcoder::dsu uf(N);\n    T res = 0;\n    for(const auto [v, u,\
     \ cost]: edges) {\n        if(uf.same(u, v)) continue;\n        uf.merge(u, v);\n\
-    \        res += cost;\n    }\n\n    return res;\n}\n#line 5 \"aizu/grl_2_a_kruskal.test.cpp\"\
-    \n\nusing namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
+    \        res += cost;\n    }\n\n    // if(uf.size(0) != N) return -1; // \u5168\
+    \u57DF\u6728\u304C\u69CB\u6210\u3067\u304D\u308B\u304B\u77E5\u308A\u305F\u3044\
+    \u3068\u304D\n    return res;\n}\n#line 5 \"aizu/grl_2_a_kruskal.test.cpp\"\n\n\
+    using namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
     \n    int V, E;\n    cin >> V >> E;\n    Edges<int> edges;\n    for(int i=0; i<E;\
     \ i++) {\n        int s, t, w;\n        cin >> s >> t >> w;\n        edges.emplace_back(s,\
     \ t, w);\n    }\n\n    cout << kruskal(edges, V) << endl;\n}\n"
@@ -39,7 +41,7 @@ data:
   isVerificationFile: true
   path: aizu/grl_2_a_kruskal.test.cpp
   requiredBy: []
-  timestamp: '2021-06-29 19:12:26+09:00'
+  timestamp: '2021-07-18 16:10:01+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: aizu/grl_2_a_kruskal.test.cpp
