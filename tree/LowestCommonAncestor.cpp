@@ -15,18 +15,21 @@ private:
     const int _root;
     const int _log = 31;
     std::vector<std::vector<std::pair<int,T>>> _adjacency_list;
-    std::vector<int> _depth;
+    std::vector<int> _depth, _subtree_size;
     std::vector<T> _distance;
     std::vector<std::vector<int>> _doubling;
 
-    void dfs(int v, int depth, T distance, int parent=-1) {
+    int dfs(int v, int depth, T distance, int parent=-1) {
+        int subtree_size = 1;
         _depth[v] = depth;
         _distance[v] = distance;
         _doubling[0][v] = parent;
         for(const auto [u, cost]: _adjacency_list[v]) {
             if(u == parent) continue;
-            dfs(u, depth+1, distance+cost, v);
+            subtree_size += dfs(u, depth+1, distance+cost, v);
         }
+        _subtree_size[v] = subtree_size;
+        return subtree_size;
     }
 
     void doubling() {
@@ -43,7 +46,7 @@ private:
 
 public:
     explicit LowestCommonAncestor(const std::vector<std::vector<int>> & g, int root)
-    : _n(g.size()), _root(root), _adjacency_list(_n), _depth(_n), _distance(_n), _doubling(_log, std::vector<int>(_n)) {
+    : _n(g.size()), _root(root), _adjacency_list(_n), _depth(_n), _subtree_size(_n), _distance(_n), _doubling(_log, std::vector<int>(_n)) {
         for(int v=0; v<_n; v++) {
             for(auto u: g[v]) {
                 _adjacency_list[v].emplace_back(u, 1);
@@ -53,7 +56,7 @@ public:
         doubling();
     }
     explicit LowestCommonAncestor(const std::vector<std::vector<std::pair<int,T>>> & g, int root)
-    : _n(g.size()), _root(root), _adjacency_list(g), _depth(_n), _distance(_n), _doubling(_log, std::vector<int>(_n)) {
+    : _n(g.size()), _root(root), _adjacency_list(g), _depth(_n), _subtree_size(_n), _distance(_n), _doubling(_log, std::vector<int>(_n)) {
         dfs(_root, 0, T());
         doubling();
     }
@@ -104,6 +107,11 @@ public:
     // int depth(int v) const {
     //     return _depth[v];
     // }
+
+    // verify: https://atcoder.jp/contests/typical90/submissions/24348390
+    int subtree_size(int v) const {
+        return _subtree_size[v];
+    }
 
     // unverified
     // int distance(int v, int u) const {
