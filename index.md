@@ -49,6 +49,9 @@ data:
       path: graph/shortest_hamilton_cycle.cpp
       title: "\u6700\u77ED\u30CF\u30DF\u30EB\u30C8\u30F3\u9589\u8DEF\uFF08TSP: Traveling\
         \ Salesman Problem\uFF09"
+    - icon: ':warning:'
+      path: graph/shortest_hamilton_path.cpp
+      title: "\u6700\u77ED\u30CF\u30DF\u30EB\u30C8\u30F3\u8DEF"
     - icon: ':heavy_check_mark:'
       path: graph/topological_sort.cpp
       title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
