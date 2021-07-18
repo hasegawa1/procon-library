@@ -19,7 +19,7 @@ data:
     \n\n#include <iostream>\n#line 1 \"dp/longest_increasing_subsequence.cpp\"\n/**\n\
     \ * @brief \u6700\u9577\u5897\u52A0\u90E8\u5206\u5217\uFF08LIS: Longest Increasing\
     \ Subsequence\uFF09\n * @author hasegawa1\n */\n\n#include <vector>\n#include\
-    \ <algorithm>\n\ntemplate<typename T>\nT longest_increasing_subsequence(const\
+    \ <algorithm>\n\ntemplate<typename T>\nint longest_increasing_subsequence(const\
     \ std::vector<T> &v, bool strict) {\n    std::vector<T> lis;\n    lis.reserve(v.size());\n\
     \    for(auto e: v) {\n        auto itr = strict ? std::lower_bound(lis.begin(),\
     \ lis.end(), e) : std::upper_bound(lis.begin(), lis.end(), e);\n        if(itr\
@@ -40,7 +40,7 @@ data:
   isVerificationFile: true
   path: aizu/dpl_1_d.test.cpp
   requiredBy: []
-  timestamp: '2021-07-04 19:27:20+09:00'
+  timestamp: '2021-07-18 16:07:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: aizu/dpl_1_d.test.cpp
