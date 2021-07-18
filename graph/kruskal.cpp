@@ -25,5 +25,6 @@ T kruskal(Edges<T> &edges, int N) {
         res += cost;
     }
 
+    // if(uf.size(0) != N) return -1; // 全域木が構成できるか知りたいとき
     return res;
 }
