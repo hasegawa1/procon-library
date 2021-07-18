@@ -7,7 +7,7 @@
 #include <algorithm>
 
 template<typename T>
-T longest_increasing_subsequence(const std::vector<T> &v, bool strict) {
+int longest_increasing_subsequence(const std::vector<T> &v, bool strict) {
     std::vector<T> lis;
     lis.reserve(v.size());
     for(auto e: v) {
