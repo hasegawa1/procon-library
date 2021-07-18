@@ -56,6 +56,11 @@ data:
       path: graph/warshall_floyd.cpp
       title: "\u5168\u70B9\u5BFE\u9593\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Warshall\
         \ Floyd\uFF09"
+  - name: matrix
+    pages:
+    - icon: ':warning:'
+      path: matrix/BinaryMatrix.cpp
+      title: "\u4E8C\u5024\u884C\u5217"
   - name: number-theory
     pages:
     - icon: ':heavy_check_mark:'
