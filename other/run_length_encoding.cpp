@@ -7,7 +7,6 @@
 #include <string>
 #include <algorithm>
 
-// verify: https://atcoder.jp/contests/typical90/submissions/24392343
 std::vector<std::pair<char,int>> run_length_encoding(const std::string & s) {
     std::vector<std::pair<char,int>> res;
     for(const auto e: s) {
