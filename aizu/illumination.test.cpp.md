@@ -18,14 +18,14 @@ data:
     \n\n#include <iostream>\n#include <vector>\n#line 1 \"other/run_length_encoding.cpp\"\
     \n/**\n * @brief \u9023\u9577\u5727\u7E2E\n * @author hasegawa1\n */\n\n#line\
     \ 7 \"other/run_length_encoding.cpp\"\n#include <string>\n#include <algorithm>\n\
-    \n// verify: https://atcoder.jp/contests/typical90/submissions/24392343\nstd::vector<std::pair<char,int>>\
-    \ run_length_encoding(const std::string & s) {\n    std::vector<std::pair<char,int>>\
-    \ res;\n    for(const auto e: s) {\n        if(res.empty() || e != res.back().first)\
-    \ {\n            res.emplace_back(e, 1);\n        } else {\n            res.back().second++;\n\
-    \        }\n    }\n    return res;\n}\n\ntemplate<typename T>\nstd::vector<std::pair<T,int>>\
-    \ run_length_encoding(const std::vector<T> & v) {\n    std::vector<std::pair<T,int>>\
-    \ res;\n    for(const auto e: v) {\n        if(res.empty() || e != res.back().first)\
-    \ {\n            res.emplace_back(e, 1);\n        } else {\n            res.back().second++;\n\
+    \nstd::vector<std::pair<char,int>> run_length_encoding(const std::string & s)\
+    \ {\n    std::vector<std::pair<char,int>> res;\n    for(const auto e: s) {\n \
+    \       if(res.empty() || e != res.back().first) {\n            res.emplace_back(e,\
+    \ 1);\n        } else {\n            res.back().second++;\n        }\n    }\n\
+    \    return res;\n}\n\ntemplate<typename T>\nstd::vector<std::pair<T,int>> run_length_encoding(const\
+    \ std::vector<T> & v) {\n    std::vector<std::pair<T,int>> res;\n    for(const\
+    \ auto e: v) {\n        if(res.empty() || e != res.back().first) {\n         \
+    \   res.emplace_back(e, 1);\n        } else {\n            res.back().second++;\n\
     \        }\n    }\n    return res;\n}\n#line 6 \"aizu/illumination.test.cpp\"\n\
     \nusing namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
     \n    int N;\n    cin >> N;\n    vector<int> v(N);\n    for(int i=0; i<N; i++)\
@@ -48,7 +48,7 @@ data:
   isVerificationFile: true
   path: aizu/illumination.test.cpp
   requiredBy: []
-  timestamp: '2021-07-20 00:04:24+09:00'
+  timestamp: '2021-07-20 00:08:12+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: aizu/illumination.test.cpp
