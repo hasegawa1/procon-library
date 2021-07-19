@@ -92,7 +92,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/inversion_number.cpp
       title: "\u8EE2\u5012\u6570"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: other/run_length_encoding.cpp
       title: "\u9023\u9577\u5727\u7E2E"
     - icon: ':heavy_check_mark:'
@@ -190,6 +190,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/grl_5_c.test.cpp
       title: aizu/grl_5_c.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/illumination.test.cpp
+      title: aizu/illumination.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/illumination_string.test.cpp
+      title: aizu/illumination_string.test.cpp
     - icon: ':heavy_check_mark:'
       path: aizu/ntl_1_a.test.cpp
       title: aizu/ntl_1_a.test.cpp
