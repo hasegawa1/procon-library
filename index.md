@@ -92,6 +92,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/inversion_number.cpp
       title: "\u8EE2\u5012\u6570"
+    - icon: ':warning:'
+      path: other/run_length_encoding.cpp
+      title: "\u9023\u9577\u5727\u7E2E"
     - icon: ':heavy_check_mark:'
       path: other/schedule_intervals.cpp
       title: "\u533A\u9593\u30B9\u30B1\u30B8\u30E5\u30FC\u30EA\u30F3\u30B0\u554F\u984C"
