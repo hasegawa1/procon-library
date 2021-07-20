@@ -88,35 +88,30 @@ public:
         return lowest_common_ancestor(v, u);
     }
 
-    // unverified
-    // int size() const {
-    //     return _n;
-    // }
+    int size() const {
+        return _n;
+    }
 
-    // unverified
-    // int root() const {
-    //     return _root;
-    // }
+    int root() const {
+        return _root;
+    }
 
-    // unverified
-    // int parent(int v) const {
-    //     return ancestor(v, 1);
-    // }
+    int parent(int v) const {
+        return ancestor(v, 1);
+    }
 
-    // unverified
-    // int depth(int v) const {
-    //     return _depth[v];
-    // }
+    int depth(int v) const {
+        return _depth[v];
+    }
 
     // verify: https://atcoder.jp/contests/typical90/submissions/24348390
     int subtree_size(int v) const {
         return _subtree_size[v];
     }
 
-    // unverified
-    // int distance(int v, int u) const {
-    //     return _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v, u)];
-    // }
+    int distance(int v, int u) const {
+        return _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v, u)];
+    }
 
     // unverified
     // bool is_on_path(int v, int u, int x) const {
