@@ -97,7 +97,7 @@ public:
     }
 
     int parent(int v) const {
-        return ancestor(v, 1);
+        return _doubling[0][v];
     }
 
     int depth(int v) const {
