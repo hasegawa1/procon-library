@@ -109,7 +109,7 @@ public:
         return _subtree_size[v];
     }
 
-    int distance(int v, int u) const {
+    T distance(int v, int u) const {
         return _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v, u)];
     }
 
