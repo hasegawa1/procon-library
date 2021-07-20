@@ -18,5 +18,5 @@ int main(void) {
         edges.emplace_back(s, t, w);
     }
 
-    cout << kruskal(edges, V) << endl;
+    cout << kruskal(edges, V).cost << endl;
 }

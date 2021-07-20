@@ -2,10 +2,11 @@
 
 #include <iostream>
 #include <vector>
+#include "atcoder/dsu"
 #include "../graph/dijkstra.cpp"
+#include "../graph/kruskal.cpp"
 #include "../tree/LowestCommonAncestor.cpp"
 #include "../other/Doubling.cpp"
-#include "atcoder/dsu"
 
 using namespace std;
 using namespace atcoder;
@@ -31,38 +32,32 @@ int main(void) {
         g[A[j]].emplace_back(B[j], L[j]);
         g[B[j]].emplace_back(A[j], L[j]);
     }
-
     auto dist = dijkstra(g, F);
 
-    WeightedGraph<int> tree(N);
-    vector<tuple<int,int,int>> edges, mst;
+    vector<tuple<int,int,int>> edges;
     for(int j=0; j<M; j++) {
-        edges.emplace_back(min(dist[A[j]], dist[B[j]]), A[j], B[j]);
+        edges.emplace_back(A[j], B[j], -min(dist[A[j]], dist[B[j]]));
     }
-    sort(edges.rbegin(), edges.rend());
-    dsu uf(N);
-    for(const auto [cost, v, u]: edges) {
-        if(uf.same(v, u)) continue;
-        uf.merge(v, u);
-        mst.emplace_back(cost, v, u);
+    auto mst = kruskal(edges, N).edges;
+
+    WeightedGraph<int> tree(N);
+    for(const auto [u, v, cost]: mst) {
         tree[v].emplace_back(u, 1);
         tree[u].emplace_back(v, 1);
     }
-
     LowestCommonAncestor lca(tree, 0);
 
     vector<int> next(N, -1), cost(N, 0);
     for(int i=1; i<N; i++) {
         next[i] = lca.parent(i);
     }
-    for(const auto [c, v, u]: mst) {
+    for(const auto [u, v, c]: mst) {
         if(lca.depth(v) < lca.depth(u)) {
-            cost[u] = c;
+            cost[u] = -c;
         } else {
-            cost[v] = c;
+            cost[v] = -c;
         }
     }
-
     Doubling dbl(next, cost);
 
     while(Q--) {
