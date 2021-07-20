@@ -56,8 +56,8 @@ data:
     \ }\n\n    int parent(int v) const {\n        return _doubling[0][v];\n    }\n\
     \n    int depth(int v) const {\n        return _depth[v];\n    }\n\n    // verify:\
     \ https://atcoder.jp/contests/typical90/submissions/24348390\n    int subtree_size(int\
-    \ v) const {\n        return _subtree_size[v];\n    }\n\n    int distance(int\
-    \ v, int u) const {\n        return _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v,\
+    \ v) const {\n        return _subtree_size[v];\n    }\n\n    T distance(int v,\
+    \ int u) const {\n        return _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v,\
     \ u)];\n    }\n\n    // unverified\n    // bool is_on_path(int v, int u, int x)\
     \ const {\n    //     return (distance(v, x) + distance(u, x) == distance(v, u));\n\
     \    // }\n};\n#line 6 \"yosupo/lowest_common_ancestor.test.cpp\"\n\nusing namespace\
@@ -78,7 +78,7 @@ data:
   isVerificationFile: true
   path: yosupo/lowest_common_ancestor.test.cpp
   requiredBy: []
-  timestamp: '2021-07-20 13:58:34+09:00'
+  timestamp: '2021-07-20 14:36:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: yosupo/lowest_common_ancestor.test.cpp

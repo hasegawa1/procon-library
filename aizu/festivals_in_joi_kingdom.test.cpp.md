@@ -63,7 +63,7 @@ data:
   isVerificationFile: true
   path: aizu/festivals_in_joi_kingdom.test.cpp
   requiredBy: []
-  timestamp: '2021-07-20 14:18:41+09:00'
+  timestamp: '2021-07-20 14:36:40+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: aizu/festivals_in_joi_kingdom.test.cpp
