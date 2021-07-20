@@ -21,17 +21,27 @@ data:
     \ntemplate<typename T>\nusing WeightedGraph = std::vector<std::vector<std::pair<int,T>>>;\n\
     \ntemplate<typename T>\nstd::vector<T> dijkstra(const std::vector<std::vector<std::pair<int,T>>>\
     \ & adjacency_list, int start, T unreachable = -1) {\n    std::vector<T> dist(adjacency_list.size(),\
-    \ unreachable);\n    dist[start] = 0; // \u30B9\u30BF\u30FC\u30C8\u306B\u623B\u3063\
-    \u3066\u304F\u308B\u3068\u304D\u306F\u3053\u306E\u884C\u3092\u6D88\u3059\n   \
-    \ std::priority_queue<std::pair<T,int>, std::vector<std::pair<T,int>>, std::greater<std::pair<T,int>>>\
-    \ pq;\n    pq.emplace(0, start);\n\n    while(!pq.empty()) {\n        const auto\
-    \ [cost, v] = pq.top(); pq.pop();\n        if(dist[v] != unreachable && dist[v]\
-    \ < cost) continue;\n        for(const auto [u, cost2]: adjacency_list[v]) {\n\
-    \            if(cost2 == unreachable) continue;\n            T next_cost = cost\
-    \ + cost2;\n            if(dist[u] != unreachable && dist[u] <= next_cost) continue;\n\
-    \            dist[u] = next_cost;\n            pq.emplace(next_cost, u);\n   \
-    \     }\n    }\n\n    return dist;\n}\n#line 5 \"aizu/grl_1_a.test.cpp\"\n\nusing\
-    \ namespace std;\n\ntemplate<typename T>\nusing WeightedGraph = std::vector<std::vector<std::pair<int,T>>>;\n\
+    \ unreachable);\n    std::priority_queue<std::pair<T,int>, std::vector<std::pair<T,int>>,\
+    \ std::greater<std::pair<T,int>>> pq;\n    dist[start] = 0;\n    pq.emplace(0,\
+    \ start);\n\n    while(!pq.empty()) {\n        const auto [cost, v] = pq.top();\
+    \ pq.pop();\n        if(dist[v] != unreachable && dist[v] < cost) continue;\n\
+    \        for(const auto [u, cost2]: adjacency_list[v]) {\n            if(cost2\
+    \ == unreachable) continue;\n            T next_cost = cost + cost2;\n       \
+    \     if(dist[u] != unreachable && dist[u] <= next_cost) continue;\n         \
+    \   dist[u] = next_cost;\n            pq.emplace(next_cost, u);\n        }\n \
+    \   }\n\n    return dist;\n}\n\ntemplate<typename T>\nstd::vector<T> dijkstra(const\
+    \ std::vector<std::vector<std::pair<int,T>>> & adjacency_list, const std::vector<int>\
+    \ & start, T unreachable = -1) {\n    std::vector<T> dist(adjacency_list.size(),\
+    \ unreachable);\n    std::priority_queue<std::pair<T,int>, std::vector<std::pair<T,int>>,\
+    \ std::greater<std::pair<T,int>>> pq;\n    for(const auto s: start) {\n      \
+    \  dist[s] = 0;\n        pq.emplace(0, s);\n    }\n\n    while(!pq.empty()) {\n\
+    \        const auto [cost, v] = pq.top(); pq.pop();\n        if(dist[v] != unreachable\
+    \ && dist[v] < cost) continue;\n        for(const auto [u, cost2]: adjacency_list[v])\
+    \ {\n            if(cost2 == unreachable) continue;\n            T next_cost =\
+    \ cost + cost2;\n            if(dist[u] != unreachable && dist[u] <= next_cost)\
+    \ continue;\n            dist[u] = next_cost;\n            pq.emplace(next_cost,\
+    \ u);\n        }\n    }\n\n    return dist;\n}\n#line 5 \"aizu/grl_1_a.test.cpp\"\
+    \n\nusing namespace std;\n\ntemplate<typename T>\nusing WeightedGraph = std::vector<std::vector<std::pair<int,T>>>;\n\
     \nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
     \n    int V, E, r;\n    cin >> V >> E >> r;\n\n    WeightedGraph<int64_t> g(V);\n\
     \    for(int i=0; i<E; i++) {\n        int s, t, d;\n        cin >> s >> t >>\
@@ -52,7 +62,7 @@ data:
   isVerificationFile: true
   path: aizu/grl_1_a.test.cpp
   requiredBy: []
-  timestamp: '2021-06-29 19:12:26+09:00'
+  timestamp: '2021-07-20 13:31:57+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: aizu/grl_1_a.test.cpp

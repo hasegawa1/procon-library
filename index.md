@@ -80,7 +80,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/CumulativeSum2.cpp
       title: "2\u6B21\u5143\u7D2F\u7A4D\u548C"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: other/Doubling.cpp
       title: "\u30C0\u30D6\u30EA\u30F3\u30B0"
     - icon: ':heavy_check_mark:'
@@ -166,6 +166,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/dsl_5_b.test.cpp
       title: aizu/dsl_5_b.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/festivals_in_joi_kingdom.test.cpp
+      title: aizu/festivals_in_joi_kingdom.test.cpp
     - icon: ':heavy_check_mark:'
       path: aizu/grl_1_a.test.cpp
       title: aizu/grl_1_a.test.cpp

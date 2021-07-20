@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: aizu/festivals_in_joi_kingdom.test.cpp
+    title: aizu/festivals_in_joi_kingdom.test.cpp
+  - icon: ':heavy_check_mark:'
     path: aizu/grl_5_c.test.cpp
     title: aizu/grl_5_c.test.cpp
   - icon: ':heavy_check_mark:'
@@ -52,17 +55,15 @@ data:
     \      if(_doubling[i][v] != _doubling[i][u]) {\n                v = _doubling[i][v];\n\
     \                u = _doubling[i][u];\n            }\n        }\n        return\
     \ _doubling[0][v];\n    }\n\n    int operator()(int v, int u) const {\n      \
-    \  return lowest_common_ancestor(v, u);\n    }\n\n    // unverified\n    // int\
-    \ size() const {\n    //     return _n;\n    // }\n\n    // unverified\n    //\
-    \ int root() const {\n    //     return _root;\n    // }\n\n    // unverified\n\
-    \    // int parent(int v) const {\n    //     return ancestor(v, 1);\n    // }\n\
-    \n    // unverified\n    // int depth(int v) const {\n    //     return _depth[v];\n\
-    \    // }\n\n    // verify: https://atcoder.jp/contests/typical90/submissions/24348390\n\
-    \    int subtree_size(int v) const {\n        return _subtree_size[v];\n    }\n\
-    \n    // unverified\n    // int distance(int v, int u) const {\n    //     return\
-    \ _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v, u)];\n \
-    \   // }\n\n    // unverified\n    // bool is_on_path(int v, int u, int x) const\
-    \ {\n    //     return (distance(v, x) + distance(u, x) == distance(v, u));\n\
+    \  return lowest_common_ancestor(v, u);\n    }\n\n    int size() const {\n   \
+    \     return _n;\n    }\n\n    int root() const {\n        return _root;\n   \
+    \ }\n\n    int parent(int v) const {\n        return ancestor(v, 1);\n    }\n\n\
+    \    int depth(int v) const {\n        return _depth[v];\n    }\n\n    // verify:\
+    \ https://atcoder.jp/contests/typical90/submissions/24348390\n    int subtree_size(int\
+    \ v) const {\n        return _subtree_size[v];\n    }\n\n    int distance(int\
+    \ v, int u) const {\n        return _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v,\
+    \ u)];\n    }\n\n    // unverified\n    // bool is_on_path(int v, int u, int x)\
+    \ const {\n    //     return (distance(v, x) + distance(u, x) == distance(v, u));\n\
     \    // }\n};\n"
   code: "/**\n * @brief \u6700\u5C0F\u5171\u901A\u7956\u5148\uFF08LCA: Lowest Common\
     \ Ancestor\uFF09\n * @author hasegawa1\n */\n\n#include <vector>\n#include <cstdint>\n\
@@ -98,26 +99,25 @@ data:
     \      if(_doubling[i][v] != _doubling[i][u]) {\n                v = _doubling[i][v];\n\
     \                u = _doubling[i][u];\n            }\n        }\n        return\
     \ _doubling[0][v];\n    }\n\n    int operator()(int v, int u) const {\n      \
-    \  return lowest_common_ancestor(v, u);\n    }\n\n    // unverified\n    // int\
-    \ size() const {\n    //     return _n;\n    // }\n\n    // unverified\n    //\
-    \ int root() const {\n    //     return _root;\n    // }\n\n    // unverified\n\
-    \    // int parent(int v) const {\n    //     return ancestor(v, 1);\n    // }\n\
-    \n    // unverified\n    // int depth(int v) const {\n    //     return _depth[v];\n\
-    \    // }\n\n    // verify: https://atcoder.jp/contests/typical90/submissions/24348390\n\
-    \    int subtree_size(int v) const {\n        return _subtree_size[v];\n    }\n\
-    \n    // unverified\n    // int distance(int v, int u) const {\n    //     return\
-    \ _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v, u)];\n \
-    \   // }\n\n    // unverified\n    // bool is_on_path(int v, int u, int x) const\
-    \ {\n    //     return (distance(v, x) + distance(u, x) == distance(v, u));\n\
+    \  return lowest_common_ancestor(v, u);\n    }\n\n    int size() const {\n   \
+    \     return _n;\n    }\n\n    int root() const {\n        return _root;\n   \
+    \ }\n\n    int parent(int v) const {\n        return ancestor(v, 1);\n    }\n\n\
+    \    int depth(int v) const {\n        return _depth[v];\n    }\n\n    // verify:\
+    \ https://atcoder.jp/contests/typical90/submissions/24348390\n    int subtree_size(int\
+    \ v) const {\n        return _subtree_size[v];\n    }\n\n    int distance(int\
+    \ v, int u) const {\n        return _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v,\
+    \ u)];\n    }\n\n    // unverified\n    // bool is_on_path(int v, int u, int x)\
+    \ const {\n    //     return (distance(v, x) + distance(u, x) == distance(v, u));\n\
     \    // }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: tree/LowestCommonAncestor.cpp
   requiredBy: []
-  timestamp: '2021-07-18 16:51:51+09:00'
+  timestamp: '2021-07-20 13:31:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - aizu/grl_5_c.test.cpp
+  - aizu/festivals_in_joi_kingdom.test.cpp
   - yosupo/lowest_common_ancestor.test.cpp
 documentation_of: tree/LowestCommonAncestor.cpp
 layout: document
