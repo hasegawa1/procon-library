@@ -53,8 +53,8 @@ data:
     \ _doubling[0][v];\n    }\n\n    int operator()(int v, int u) const {\n      \
     \  return lowest_common_ancestor(v, u);\n    }\n\n    int size() const {\n   \
     \     return _n;\n    }\n\n    int root() const {\n        return _root;\n   \
-    \ }\n\n    int parent(int v) const {\n        return ancestor(v, 1);\n    }\n\n\
-    \    int depth(int v) const {\n        return _depth[v];\n    }\n\n    // verify:\
+    \ }\n\n    int parent(int v) const {\n        return _doubling[0][v];\n    }\n\
+    \n    int depth(int v) const {\n        return _depth[v];\n    }\n\n    // verify:\
     \ https://atcoder.jp/contests/typical90/submissions/24348390\n    int subtree_size(int\
     \ v) const {\n        return _subtree_size[v];\n    }\n\n    int distance(int\
     \ v, int u) const {\n        return _distance[v] + _distance[u] - 2*_distance[lowest_common_ancestor(v,\
@@ -82,7 +82,7 @@ data:
   isVerificationFile: true
   path: aizu/grl_5_c.test.cpp
   requiredBy: []
-  timestamp: '2021-07-20 13:31:57+09:00'
+  timestamp: '2021-07-20 13:58:34+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: aizu/grl_5_c.test.cpp
