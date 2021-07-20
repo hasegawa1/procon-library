@@ -3,8 +3,6 @@
  * @author hasegawa1
  */
 
-// verify: https://atcoder.jp/contests/typical90/submissions/24346778
-
 #include <vector>
 #include <algorithm>
 #include <limits>
