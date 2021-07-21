@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: matrix/Matrix.cpp
-    title: "\u884C\u5217(Mod p)"
+    title: "\u884C\u5217\uFF08Mod p\uFF09"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -34,7 +34,7 @@ data:
   isVerificationFile: true
   path: yosupo/matrix_determinant.test.cpp
   requiredBy: []
-  timestamp: '2021-07-21 16:49:29+09:00'
+  timestamp: '2021-07-21 17:37:28+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: yosupo/matrix_determinant.test.cpp

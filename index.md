@@ -6,6 +6,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: combinatorics/Combinatorics.cpp
       title: "\u7D44\u307F\u5408\u308F\u305B\u5404\u7A2E"
+    - icon: ':heavy_check_mark:'
+      path: combinatorics/montmort_number.cpp
+      title: "\u30E2\u30F3\u30E2\u30FC\u30EB\u6570"
   - name: dp
     pages:
     - icon: ':heavy_check_mark:'
@@ -69,7 +72,7 @@ data:
       title: "\u4E8C\u5024\u884C\u5217"
     - icon: ':heavy_check_mark:'
       path: matrix/Matrix.cpp
-      title: "\u884C\u5217(Mod p)"
+      title: "\u884C\u5217\uFF08Mod p\uFF09"
   - name: number-theory
     pages:
     - icon: ':heavy_check_mark:'
@@ -228,6 +231,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: yosupo/matrix_product.test.cpp
       title: yosupo/matrix_product.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: yosupo/montmort_number.test.cpp
+      title: yosupo/montmort_number.test.cpp
     - icon: ':heavy_check_mark:'
       path: yosupo/static_range_sum.test.cpp
       title: yosupo/static_range_sum.test.cpp

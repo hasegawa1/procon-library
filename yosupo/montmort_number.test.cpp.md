@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: matrix/Matrix.cpp
-    title: "\u884C\u5217\uFF08Mod p\uFF09"
+    path: combinatorics/montmort_number.cpp
+    title: "\u30E2\u30F3\u30E2\u30FC\u30EB\u6570"
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -11,9 +11,9 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/matrix_product
+    PROBLEM: https://judge.yosupo.jp/problem/montmort_number_mod
     links:
-    - https://judge.yosupo.jp/problem/matrix_product
+    - https://judge.yosupo.jp/problem/montmort_number_mod
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
@@ -23,24 +23,25 @@ data:
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: atcoder/modint:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/matrix_product\"\n\n#include\
-    \ <iostream>\n#include \"atcoder/modint\"\n#include \"../matrix/Matrix.cpp\"\n\
-    \nusing namespace std;\nusing mint = atcoder::modint998244353;\n\nint main(void)\
-    \ {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\n    int N,\
-    \ M, K;\n    cin >> N >> M >> K;\n    Matrix<mint> a(N, M), b(M, K);\n    cin\
-    \ >> a >> b;\n\n    auto c = a * b;\n    cout << c;\n    return 0;\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/montmort_number_mod\"\n\
+    \n#include <iostream>\n#include \"atcoder/modint\"\n#include \"../combinatorics/montmort_number.cpp\"\
+    \n\nusing namespace std;\nusing mint = atcoder::modint;\n\nint main(void) {\n\
+    \    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\n    int N, M;\n\
+    \    cin >> N >> M;\n\n    mint::set_mod(M);\n\n    auto m = montmort_number<mint>(N);\n\
+    \    for(int i=1; i<=N; i++) {\n        cout << m[i].val() << (i == N ? '\\n'\
+    \ : ' ');\n    }\n}\n"
   dependsOn:
-  - matrix/Matrix.cpp
+  - combinatorics/montmort_number.cpp
   isVerificationFile: true
-  path: yosupo/matrix_product.test.cpp
+  path: yosupo/montmort_number.test.cpp
   requiredBy: []
-  timestamp: '2021-07-21 17:37:28+09:00'
+  timestamp: '2021-07-21 17:47:56+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: yosupo/matrix_product.test.cpp
+documentation_of: yosupo/montmort_number.test.cpp
 layout: document
 redirect_from:
-- /verify/yosupo/matrix_product.test.cpp
-- /verify/yosupo/matrix_product.test.cpp.html
-title: yosupo/matrix_product.test.cpp
+- /verify/yosupo/montmort_number.test.cpp
+- /verify/yosupo/montmort_number.test.cpp.html
+title: yosupo/montmort_number.test.cpp
 ---

@@ -13,12 +13,12 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    document_title: "\u884C\u5217(Mod p)"
+    document_title: "\u884C\u5217\uFF08Mod p\uFF09"
     links: []
-  bundledCode: "#line 1 \"matrix/Matrix.cpp\"\n/**\n * @brief \u884C\u5217(Mod p)\n\
-    \ * @author hasegawa1\n */\n\n#include <vector>\n#include <iostream>\n#include\
-    \ <cassert>\n\ntemplate<typename Tmod>\nclass Matrix {\nprivate:\n    int _n,\
-    \ _m;\n    std::vector<std::vector<Tmod>> _mat;\npublic:\n    explicit Matrix(const\
+  bundledCode: "#line 1 \"matrix/Matrix.cpp\"\n/**\n * @brief \u884C\u5217\uFF08Mod\
+    \ p\uFF09\n * @author hasegawa1\n */\n\n#include <vector>\n#include <iostream>\n\
+    #include <cassert>\n\ntemplate<typename Tmod>\nclass Matrix {\nprivate:\n    int\
+    \ _n, _m;\n    std::vector<std::vector<Tmod>> _mat;\npublic:\n    explicit Matrix(const\
     \ int n): _n(n), _m(n), _mat(_n, std::vector<Tmod>(_n)) {};\n    explicit Matrix(const\
     \ int n, const int m): _n(n), _m(m), _mat(_n, std::vector<Tmod>(_m)) {};\n   \
     \ explicit Matrix(const std::vector<std::vector<int>> & v): _n(v.size()), _m(v[0].size()),\
@@ -74,9 +74,9 @@ data:
     \ tmp[j][i];\n                for(int k=0; k<_n; k++) {\n                    tmp[j][k]\
     \ -= tmp[i][k] * a;\n                }\n            }\n        }\n        return\
     \ res;\n    }\n};\n"
-  code: "/**\n * @brief \u884C\u5217(Mod p)\n * @author hasegawa1\n */\n\n#include\
-    \ <vector>\n#include <iostream>\n#include <cassert>\n\ntemplate<typename Tmod>\n\
-    class Matrix {\nprivate:\n    int _n, _m;\n    std::vector<std::vector<Tmod>>\
+  code: "/**\n * @brief \u884C\u5217\uFF08Mod p\uFF09\n * @author hasegawa1\n */\n\
+    \n#include <vector>\n#include <iostream>\n#include <cassert>\n\ntemplate<typename\
+    \ Tmod>\nclass Matrix {\nprivate:\n    int _n, _m;\n    std::vector<std::vector<Tmod>>\
     \ _mat;\npublic:\n    explicit Matrix(const int n): _n(n), _m(n), _mat(_n, std::vector<Tmod>(_n))\
     \ {};\n    explicit Matrix(const int n, const int m): _n(n), _m(m), _mat(_n, std::vector<Tmod>(_m))\
     \ {};\n    explicit Matrix(const std::vector<std::vector<int>> & v): _n(v.size()),\
@@ -136,7 +136,7 @@ data:
   isVerificationFile: false
   path: matrix/Matrix.cpp
   requiredBy: []
-  timestamp: '2021-07-21 16:49:29+09:00'
+  timestamp: '2021-07-21 17:37:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - yosupo/matrix_product.test.cpp
@@ -146,5 +146,5 @@ layout: document
 redirect_from:
 - /library/matrix/Matrix.cpp
 - /library/matrix/Matrix.cpp.html
-title: "\u884C\u5217(Mod p)"
+title: "\u884C\u5217\uFF08Mod p\uFF09"
 ---
