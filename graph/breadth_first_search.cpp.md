@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: tree/diameter.cpp
+    title: "\u6728\u306E\u76F4\u5F84"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
     path: aizu/alds1_11_c.test.cpp
@@ -35,7 +38,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: graph/breadth_first_search.cpp
-  requiredBy: []
+  requiredBy:
+  - tree/diameter.cpp
   timestamp: '2021-06-28 02:10:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

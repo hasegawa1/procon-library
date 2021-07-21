@@ -21,9 +21,11 @@ data:
     links:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_5_A
   bundledCode: "#line 1 \"aizu/grl_5_a.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_5_A\"\
-    \n\n#include <iostream>\n#line 1 \"graph/breadth_first_search.cpp\"\n/**\n * @brief\
-    \ \u5E45\u512A\u5148\u63A2\u7D22\uFF08BFS: Breadth First Search\uFF09\n * @author\
-    \ hasegawa1\n */\n\n#include <vector>\n#include <queue>\n\nstd::vector<int> bfs(const\
+    \n\n#include <iostream>\n#line 1 \"tree/diameter.cpp\"\n/**\n * @brief \u6728\u306E\
+    \u76F4\u5F84\n * @author hasegawa1\n */\n\n#include <vector>\n#include <algorithm>\n\
+    #line 1 \"graph/breadth_first_search.cpp\"\n/**\n * @brief \u5E45\u512A\u5148\u63A2\
+    \u7D22\uFF08BFS: Breadth First Search\uFF09\n * @author hasegawa1\n */\n\n#line\
+    \ 7 \"graph/breadth_first_search.cpp\"\n#include <queue>\n\nstd::vector<int> bfs(const\
     \ std::vector<std::vector<int>> & adjacency_list, int start, int unreachable =\
     \ -1) {\n    std::vector<int> dist(adjacency_list.size(), unreachable);\n    dist[start]\
     \ = 0;\n    std::queue<int> q;\n    q.emplace(start);\n\n    while(!q.empty())\
@@ -55,37 +57,35 @@ data:
     \ {\n            if(cost2 == unreachable) continue;\n            T next_cost =\
     \ cost + cost2;\n            if(dist[u] != unreachable && dist[u] <= next_cost)\
     \ continue;\n            dist[u] = next_cost;\n            pq.emplace(next_cost,\
-    \ u);\n        }\n    }\n\n    return dist;\n}\n#line 1 \"tree/diameter.cpp\"\n\
-    /**\n * @brief \u6728\u306E\u76F4\u5F84\n * @author hasegawa1\n */\n\n#line 7\
-    \ \"tree/diameter.cpp\"\n#include <algorithm>\n\ntemplate<typename T>\nusing WeightedGraph\
-    \ = std::vector<std::vector<std::pair<int,T>>>;\n\nint diameter(const std::vector<std::vector<int>>\
-    \ &g) {\n    auto dist = bfs(g, 0);\n    int v = std::distance(dist.begin(), std::max_element(dist.begin(),\
+    \ u);\n        }\n    }\n\n    return dist;\n}\n#line 10 \"tree/diameter.cpp\"\
+    \n\ntemplate<typename T>\nusing WeightedGraph = std::vector<std::vector<std::pair<int,T>>>;\n\
+    \nint diameter(const std::vector<std::vector<int>> &g) {\n    auto dist = bfs(g,\
+    \ 0);\n    int v = std::distance(dist.begin(), std::max_element(dist.begin(),\
     \ dist.end()));\n    dist = bfs(g, v);\n    return *std::max_element(dist.begin(),\
     \ dist.end());\n}\n\ntemplate<typename T>\nint diameter(const std::vector<std::vector<std::pair<int,T>>>\
     \ &g) {\n    auto dist = dijkstra(g, 0);\n    int v = std::distance(dist.begin(),\
     \ std::max_element(dist.begin(), dist.end()));\n    dist = dijkstra(g, v);\n \
-    \   return *std::max_element(dist.begin(), dist.end());\n}\n#line 7 \"aizu/grl_5_a.test.cpp\"\
+    \   return *std::max_element(dist.begin(), dist.end());\n}\n#line 5 \"aizu/grl_5_a.test.cpp\"\
     \n\nusing namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
     \n    int n;\n    cin >> n;\n    WeightedGraph<int> g(n);\n    for(int i=0; i<n-1;\
     \ i++) {\n        int s, t, w;\n        cin >> s >> t >> w;\n        g[s].emplace_back(t,\
     \ w);\n        g[t].emplace_back(s, w);\n    }\n\n    cout << diameter(g) << endl;\n\
     }\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_5_A\"\
-    \n\n#include <iostream>\n#include \"../graph/breadth_first_search.cpp\"\n#include\
-    \ \"../graph/dijkstra.cpp\"\n#include \"../tree/diameter.cpp\"\n\nusing namespace\
+    \n\n#include <iostream>\n#include \"../tree/diameter.cpp\"\n\nusing namespace\
     \ std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
     \n    int n;\n    cin >> n;\n    WeightedGraph<int> g(n);\n    for(int i=0; i<n-1;\
     \ i++) {\n        int s, t, w;\n        cin >> s >> t >> w;\n        g[s].emplace_back(t,\
     \ w);\n        g[t].emplace_back(s, w);\n    }\n\n    cout << diameter(g) << endl;\n\
     }\n"
   dependsOn:
+  - tree/diameter.cpp
   - graph/breadth_first_search.cpp
   - graph/dijkstra.cpp
-  - tree/diameter.cpp
   isVerificationFile: true
   path: aizu/grl_5_a.test.cpp
   requiredBy: []
-  timestamp: '2021-07-20 13:31:57+09:00'
+  timestamp: '2021-07-21 13:42:24+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: aizu/grl_5_a.test.cpp
