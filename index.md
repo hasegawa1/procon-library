@@ -43,6 +43,9 @@ data:
       path: graph/kruskal.cpp
       title: "\u6700\u5C0F\u5168\u57DF\u68EE\uFF08Kruskal\uFF09"
     - icon: ':heavy_check_mark:'
+      path: graph/offline_dag_reachability.cpp
+      title: "DAG\u306E\u5230\u9054\u53EF\u80FD\u6027"
+    - icon: ':heavy_check_mark:'
       path: graph/prim.cpp
       title: "\u6700\u5C0F\u5168\u57DF\u68EE\uFF08Prim\uFF09"
     - icon: ':heavy_check_mark:'
@@ -208,6 +211,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/planetary_exploration.test.cpp
       title: aizu/planetary_exploration.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/railroad.test.cpp
+      title: aizu/railroad.test.cpp
   - name: yosupo
     pages:
     - icon: ':heavy_check_mark:'

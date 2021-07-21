@@ -12,6 +12,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: aizu/grl_5_a.test.cpp
     title: aizu/grl_5_a.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: aizu/railroad.test.cpp
+    title: aizu/railroad.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -78,6 +81,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - aizu/grl_1_a.test.cpp
+  - aizu/railroad.test.cpp
   - aizu/festivals_in_joi_kingdom.test.cpp
   - aizu/grl_5_a.test.cpp
 documentation_of: graph/dijkstra.cpp
