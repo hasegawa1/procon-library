@@ -6,7 +6,7 @@
 #include <vector>
 #include <queue>
 
-std::vector<int> topological_sort(std::vector<std::vector<int>> &g) {
+std::vector<int> topological_sort(const std::vector<std::vector<int>> &g) {
     int N = g.size();
     std::vector<int> in(N);
     for(int v=0; v<N; v++) {
