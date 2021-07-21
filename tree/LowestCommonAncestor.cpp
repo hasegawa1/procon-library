@@ -14,13 +14,16 @@ private:
     const int _n;
     const int _root;
     const int _log = 31;
+    int cnt = 0;
     std::vector<std::vector<std::pair<int,T>>> _adjacency_list;
+    std::vector<int> _in, _out;
     std::vector<int> _depth, _subtree_size;
     std::vector<T> _distance;
     std::vector<std::vector<int>> _doubling;
 
     int dfs(int v, int depth, T distance, int parent=-1) {
         int subtree_size = 1;
+        _in[v] = cnt++;
         _depth[v] = depth;
         _distance[v] = distance;
         _doubling[0][v] = parent;
@@ -29,6 +32,7 @@ private:
             subtree_size += dfs(u, depth+1, distance+cost, v);
         }
         _subtree_size[v] = subtree_size;
+        _out[v] = cnt++;
         return subtree_size;
     }
 
@@ -46,7 +50,7 @@ private:
 
 public:
     explicit LowestCommonAncestor(const std::vector<std::vector<int>> & g, int root)
-    : _n(g.size()), _root(root), _adjacency_list(_n), _depth(_n), _subtree_size(_n), _distance(_n), _doubling(_log, std::vector<int>(_n)) {
+    : _n(g.size()), _root(root), _adjacency_list(_n), _in(_n), _out(_n), _depth(_n), _subtree_size(_n), _distance(_n), _doubling(_log, std::vector<int>(_n)) {
         for(int v=0; v<_n; v++) {
             for(auto u: g[v]) {
                 _adjacency_list[v].emplace_back(u, 1);
@@ -56,7 +60,7 @@ public:
         doubling();
     }
     explicit LowestCommonAncestor(const std::vector<std::vector<std::pair<int,T>>> & g, int root)
-    : _n(g.size()), _root(root), _adjacency_list(g), _depth(_n), _subtree_size(_n), _distance(_n), _doubling(_log, std::vector<int>(_n)) {
+    : _n(g.size()), _root(root), _adjacency_list(g), _in(_n), _out(_n), _depth(_n), _subtree_size(_n), _distance(_n), _doubling(_log, std::vector<int>(_n)) {
         dfs(_root, 0, T());
         doubling();
     }
@@ -98,6 +102,14 @@ public:
 
     int parent(int v) const {
         return _doubling[0][v];
+    }
+
+    int in(int v) const {
+        return _in[v];
+    }
+
+    int out(int v) const {
+        return _out[v];
     }
 
     int depth(int v) const {
