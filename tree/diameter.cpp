@@ -5,6 +5,8 @@
 
 #include <vector>
 #include <algorithm>
+#include "../graph/breadth_first_search.cpp"
+#include "../graph/dijkstra.cpp"
 
 template<typename T>
 using WeightedGraph = std::vector<std::vector<std::pair<int,T>>>;

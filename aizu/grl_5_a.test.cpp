@@ -1,8 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_5_A"
 
 #include <iostream>
-#include "../graph/breadth_first_search.cpp"
-#include "../graph/dijkstra.cpp"
 #include "../tree/diameter.cpp"
 
 using namespace std;
