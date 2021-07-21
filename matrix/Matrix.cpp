@@ -1,5 +1,5 @@
 /**
- * @brief 行列(Mod p)
+ * @brief 行列（Mod p）
  * @author hasegawa1
  */
 
