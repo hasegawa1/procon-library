@@ -67,6 +67,9 @@ data:
     - icon: ':warning:'
       path: matrix/BinaryMatrix.cpp
       title: "\u4E8C\u5024\u884C\u5217"
+    - icon: ':heavy_check_mark:'
+      path: matrix/Matrix.cpp
+      title: "\u884C\u5217(Mod p)"
   - name: number-theory
     pages:
     - icon: ':heavy_check_mark:'
@@ -219,6 +222,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: yosupo/lowest_common_ancestor.test.cpp
       title: yosupo/lowest_common_ancestor.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: yosupo/matrix_determinant.test.cpp
+      title: yosupo/matrix_determinant.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: yosupo/matrix_product.test.cpp
+      title: yosupo/matrix_product.test.cpp
     - icon: ':heavy_check_mark:'
       path: yosupo/static_range_sum.test.cpp
       title: yosupo/static_range_sum.test.cpp
