@@ -3,6 +3,8 @@
  * @author hasegawa1
  */
 
+// verify: https://atcoder.jp/contests/abc176/submissions/24440945
+
 #include <vector>
 #include <queue>
 
