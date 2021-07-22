@@ -15,18 +15,14 @@ private:
     const int _n;
     std::vector<int> _max_prime_factor;
     std::vector<int> _euler_phi;
-    std::vector<int> _moebius_mu;
 public:
-    explicit Sieve(int n = 2'000'000): _n(n+1), _max_prime_factor(_n), _euler_phi(_n), _moebius_mu(_n, 1) {
+    explicit Sieve(int n = 2'000'000): _n(n+1), _max_prime_factor(_n), _euler_phi(_n) {
         iota(_euler_phi.begin(), _euler_phi.end(), 0);
         for(int i=2; i<_n; i++) {
             if(_max_prime_factor[i]) continue;
-            _moebius_mu[i] = -1;
             for(int j=i; j<_n; j+=i) {
                 _max_prime_factor[j] = i;
                 _euler_phi[j] -= _euler_phi[j]/i;
-                if(j/i%i == 0) _moebius_mu[j] = 0;
-                else _moebius_mu[j] = -_moebius_mu[i];
             }
         }
     }
@@ -67,7 +63,6 @@ public:
         return res;
     }
 
-    // unverified
     std::vector<int64_t> divisors(int64_t n) const {
         assert(n > 0);
         std::vector<int64_t> res = {1};
@@ -94,16 +89,4 @@ public:
         }
         return res;
     }
-
-    // unverified
-    // int moebius_mu(int64_t n) const {
-    //     assert(n > 0);
-    //     if(n < _n) return _moebius_mu[n];
-    //     int res = 1;
-    //     for(const auto [p, exp]: prime_factorize(n)) {
-    //         if(exp >= 2) return 0;
-    //         res *= -1;
-    //     }
-    //     return res;
-    // }
 };
