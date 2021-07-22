@@ -209,6 +209,9 @@ data:
       path: aizu/illumination_string.test.cpp
       title: aizu/illumination_string.test.cpp
     - icon: ':heavy_check_mark:'
+      path: aizu/itp1_3_d.test.cpp
+      title: aizu/itp1_3_d.test.cpp
+    - icon: ':heavy_check_mark:'
       path: aizu/ntl_1_a.test.cpp
       title: aizu/ntl_1_a.test.cpp
     - icon: ':heavy_check_mark:'

@@ -7,6 +7,9 @@ data:
     path: aizu/alds1_1_c.test.cpp
     title: aizu/alds1_1_c.test.cpp
   - icon: ':heavy_check_mark:'
+    path: aizu/itp1_3_d.test.cpp
+    title: aizu/itp1_3_d.test.cpp
+  - icon: ':heavy_check_mark:'
     path: aizu/ntl_1_a.test.cpp
     title: aizu/ntl_1_a.test.cpp
   - icon: ':heavy_check_mark:'
@@ -44,17 +47,16 @@ data:
     \                        n /= i;\n                        ++exp;\n           \
     \         }\n                    res.emplace_back(i, exp);\n                }\n\
     \            }\n            if(n != 1) res.emplace_back(n, 1);\n        }\n  \
-    \      return res;\n    }\n\n    // unverified\n    // std::vector<int64_t> divisors(int64_t\
-    \ n) const {\n    //     assert(n > 0);\n    //     std::vector<int64_t> res =\
-    \ {1};\n    //     for(auto [p, exp]: prime_factorize(n)) {\n    //         int\
-    \ sz = res.size();\n    //         for(int i=0; i<sz; i++) {\n    //         \
-    \    int64_t now = res[i];\n    //             while(exp--) {\n    //        \
-    \         now *= p;\n    //                 std::cout << now << std::endl;\n \
-    \   //                 res.emplace_back(now);\n    //             }\n    //  \
-    \       }\n    //     }\n    //     sort(res.begin(), res.end());\n    //    \
-    \ return res;\n    // }\n\n    int64_t euler_phi(int64_t n) const {\n        assert(n\
-    \ > 0);\n        if(n < _n) return _euler_phi[n];\n        int64_t res = n;\n\
-    \        for(const auto [p, exp]: prime_factorize(n)) {\n            res -= res/p;\n\
+    \      return res;\n    }\n\n    // unverified\n    std::vector<int64_t> divisors(int64_t\
+    \ n) const {\n        assert(n > 0);\n        std::vector<int64_t> res = {1};\n\
+    \        for(const auto [p, exp]: prime_factorize(n)) {\n            int sz =\
+    \ res.size();\n            for(int i=0; i<sz; i++) {\n                int64_t\
+    \ now = res[i];\n                for(int j=0; j<exp; j++) {\n                \
+    \    now *= p;\n                    res.emplace_back(now);\n                }\n\
+    \            }\n        }\n        sort(res.begin(), res.end());\n        return\
+    \ res;\n    }\n\n    int64_t euler_phi(int64_t n) const {\n        assert(n >\
+    \ 0);\n        if(n < _n) return _euler_phi[n];\n        int64_t res = n;\n  \
+    \      for(const auto [p, exp]: prime_factorize(n)) {\n            res -= res/p;\n\
     \        }\n        return res;\n    }\n\n    // unverified\n    // int moebius_mu(int64_t\
     \ n) const {\n    //     assert(n > 0);\n    //     if(n < _n) return _moebius_mu[n];\n\
     \    //     int res = 1;\n    //     for(const auto [p, exp]: prime_factorize(n))\
@@ -86,30 +88,30 @@ data:
     \ i;\n                        ++exp;\n                    }\n                \
     \    res.emplace_back(i, exp);\n                }\n            }\n           \
     \ if(n != 1) res.emplace_back(n, 1);\n        }\n        return res;\n    }\n\n\
-    \    // unverified\n    // std::vector<int64_t> divisors(int64_t n) const {\n\
-    \    //     assert(n > 0);\n    //     std::vector<int64_t> res = {1};\n    //\
-    \     for(auto [p, exp]: prime_factorize(n)) {\n    //         int sz = res.size();\n\
-    \    //         for(int i=0; i<sz; i++) {\n    //             int64_t now = res[i];\n\
-    \    //             while(exp--) {\n    //                 now *= p;\n    // \
-    \                std::cout << now << std::endl;\n    //                 res.emplace_back(now);\n\
-    \    //             }\n    //         }\n    //     }\n    //     sort(res.begin(),\
-    \ res.end());\n    //     return res;\n    // }\n\n    int64_t euler_phi(int64_t\
-    \ n) const {\n        assert(n > 0);\n        if(n < _n) return _euler_phi[n];\n\
-    \        int64_t res = n;\n        for(const auto [p, exp]: prime_factorize(n))\
-    \ {\n            res -= res/p;\n        }\n        return res;\n    }\n\n    //\
-    \ unverified\n    // int moebius_mu(int64_t n) const {\n    //     assert(n >\
-    \ 0);\n    //     if(n < _n) return _moebius_mu[n];\n    //     int res = 1;\n\
-    \    //     for(const auto [p, exp]: prime_factorize(n)) {\n    //         if(exp\
-    \ >= 2) return 0;\n    //         res *= -1;\n    //     }\n    //     return\
-    \ res;\n    // }\n};\n"
+    \    // unverified\n    std::vector<int64_t> divisors(int64_t n) const {\n   \
+    \     assert(n > 0);\n        std::vector<int64_t> res = {1};\n        for(const\
+    \ auto [p, exp]: prime_factorize(n)) {\n            int sz = res.size();\n   \
+    \         for(int i=0; i<sz; i++) {\n                int64_t now = res[i];\n \
+    \               for(int j=0; j<exp; j++) {\n                    now *= p;\n  \
+    \                  res.emplace_back(now);\n                }\n            }\n\
+    \        }\n        sort(res.begin(), res.end());\n        return res;\n    }\n\
+    \n    int64_t euler_phi(int64_t n) const {\n        assert(n > 0);\n        if(n\
+    \ < _n) return _euler_phi[n];\n        int64_t res = n;\n        for(const auto\
+    \ [p, exp]: prime_factorize(n)) {\n            res -= res/p;\n        }\n    \
+    \    return res;\n    }\n\n    // unverified\n    // int moebius_mu(int64_t n)\
+    \ const {\n    //     assert(n > 0);\n    //     if(n < _n) return _moebius_mu[n];\n\
+    \    //     int res = 1;\n    //     for(const auto [p, exp]: prime_factorize(n))\
+    \ {\n    //         if(exp >= 2) return 0;\n    //         res *= -1;\n    //\
+    \     }\n    //     return res;\n    // }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: number-theory/Sieve.cpp
   requiredBy: []
-  timestamp: '2021-06-30 00:07:55+09:00'
+  timestamp: '2021-07-22 16:13:44+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - aizu/ntl_1_d.test.cpp
+  - aizu/itp1_3_d.test.cpp
   - aizu/alds1_1_c.test.cpp
   - aizu/ntl_1_a.test.cpp
 documentation_of: number-theory/Sieve.cpp

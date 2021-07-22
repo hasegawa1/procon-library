@@ -11,21 +11,21 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_1_C
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/all/ITP1_3_D
     links:
-    - https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_1_C
-  bundledCode: "#line 1 \"aizu/alds1_1_c.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_1_C\"\
-    \n\n#include <iostream>\n#line 1 \"number-theory/Sieve.cpp\"\n/**\n * @brief \u30A8\
-    \u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\n * @author hasegawa1\n */\n\n\
-    #include <vector>\n#include <algorithm>\n#include <numeric>\n#include <cstdint>\n\
-    #include <cassert>\n#include <atcoder/internal_math>\n\nclass Sieve {\nprivate:\n\
-    \    const int _n;\n    std::vector<int> _max_prime_factor;\n    std::vector<int>\
-    \ _euler_phi;\n    std::vector<int> _moebius_mu;\npublic:\n    explicit Sieve(int\
-    \ n = 2'000'000): _n(n+1), _max_prime_factor(_n), _euler_phi(_n), _moebius_mu(_n,\
-    \ 1) {\n        iota(_euler_phi.begin(), _euler_phi.end(), 0);\n        for(int\
-    \ i=2; i<_n; i++) {\n            if(_max_prime_factor[i]) continue;\n        \
-    \    _moebius_mu[i] = -1;\n            for(int j=i; j<_n; j+=i) {\n          \
-    \      _max_prime_factor[j] = i;\n                _euler_phi[j] -= _euler_phi[j]/i;\n\
+    - https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/all/ITP1_3_D
+  bundledCode: "#line 1 \"aizu/itp1_3_d.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/all/ITP1_3_D\"\
+    \n\n#include <iostream>\n#include <vector>\n#include <algorithm>\n#line 1 \"number-theory/Sieve.cpp\"\
+    \n/**\n * @brief \u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\n * @author\
+    \ hasegawa1\n */\n\n#line 8 \"number-theory/Sieve.cpp\"\n#include <numeric>\n\
+    #include <cstdint>\n#include <cassert>\n#include <atcoder/internal_math>\n\nclass\
+    \ Sieve {\nprivate:\n    const int _n;\n    std::vector<int> _max_prime_factor;\n\
+    \    std::vector<int> _euler_phi;\n    std::vector<int> _moebius_mu;\npublic:\n\
+    \    explicit Sieve(int n = 2'000'000): _n(n+1), _max_prime_factor(_n), _euler_phi(_n),\
+    \ _moebius_mu(_n, 1) {\n        iota(_euler_phi.begin(), _euler_phi.end(), 0);\n\
+    \        for(int i=2; i<_n; i++) {\n            if(_max_prime_factor[i]) continue;\n\
+    \            _moebius_mu[i] = -1;\n            for(int j=i; j<_n; j+=i) {\n  \
+    \              _max_prime_factor[j] = i;\n                _euler_phi[j] -= _euler_phi[j]/i;\n\
     \                if(j/i%i == 0) _moebius_mu[j] = 0;\n                else _moebius_mu[j]\
     \ = -_moebius_mu[i];\n            }\n        }\n    }\n\n    bool is_prime(int64_t\
     \ n) const {\n        assert(n > 0);\n        if(n < _n) return (_max_prime_factor[n]\
@@ -56,29 +56,30 @@ data:
     \ const {\n    //     assert(n > 0);\n    //     if(n < _n) return _moebius_mu[n];\n\
     \    //     int res = 1;\n    //     for(const auto [p, exp]: prime_factorize(n))\
     \ {\n    //         if(exp >= 2) return 0;\n    //         res *= -1;\n    //\
-    \     }\n    //     return res;\n    // }\n};\n#line 5 \"aizu/alds1_1_c.test.cpp\"\
+    \     }\n    //     return res;\n    // }\n};\n#line 7 \"aizu/itp1_3_d.test.cpp\"\
     \n\nusing namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
-    \n    Sieve s;\n\n    int n;\n    cin >> n;\n\n    int ans = 0;\n    while(n--)\
-    \ {\n        int a;\n        cin >> a;\n        ans += s.is_prime(a);\n    }\n\
-    \n    cout << ans << endl;\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_1_C\"\
-    \n\n#include <iostream>\n#include \"../number-theory/Sieve.cpp\"\n\nusing namespace\
-    \ std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
-    \n    Sieve s;\n\n    int n;\n    cin >> n;\n\n    int ans = 0;\n    while(n--)\
-    \ {\n        int a;\n        cin >> a;\n        ans += s.is_prime(a);\n    }\n\
-    \n    cout << ans << endl;\n}\n"
+    \n    Sieve s;\n\n    int a, b, c;\n    cin >> a >> b >> c;\n    auto d = s.divisors(c);\n\
+    \    cout << distance(lower_bound(d.begin(), d.end(), a), upper_bound(d.begin(),\
+    \ d.end(), b)) << endl;\n}\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/all/ITP1_3_D\"\
+    \n\n#include <iostream>\n#include <vector>\n#include <algorithm>\n#include \"\
+    ../number-theory/Sieve.cpp\"\n\nusing namespace std;\n\nint main(void) {\n   \
+    \ cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\n    Sieve s;\n\n\
+    \    int a, b, c;\n    cin >> a >> b >> c;\n    auto d = s.divisors(c);\n    cout\
+    \ << distance(lower_bound(d.begin(), d.end(), a), upper_bound(d.begin(), d.end(),\
+    \ b)) << endl;\n}\n"
   dependsOn:
   - number-theory/Sieve.cpp
   isVerificationFile: true
-  path: aizu/alds1_1_c.test.cpp
+  path: aizu/itp1_3_d.test.cpp
   requiredBy: []
   timestamp: '2021-07-22 16:13:44+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: aizu/alds1_1_c.test.cpp
+documentation_of: aizu/itp1_3_d.test.cpp
 layout: document
 redirect_from:
-- /verify/aizu/alds1_1_c.test.cpp
-- /verify/aizu/alds1_1_c.test.cpp.html
-title: aizu/alds1_1_c.test.cpp
+- /verify/aizu/itp1_3_d.test.cpp
+- /verify/aizu/itp1_3_d.test.cpp.html
+title: aizu/itp1_3_d.test.cpp
 ---

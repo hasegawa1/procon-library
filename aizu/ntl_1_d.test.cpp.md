@@ -42,23 +42,22 @@ data:
     \ i;\n                        ++exp;\n                    }\n                \
     \    res.emplace_back(i, exp);\n                }\n            }\n           \
     \ if(n != 1) res.emplace_back(n, 1);\n        }\n        return res;\n    }\n\n\
-    \    // unverified\n    // std::vector<int64_t> divisors(int64_t n) const {\n\
-    \    //     assert(n > 0);\n    //     std::vector<int64_t> res = {1};\n    //\
-    \     for(auto [p, exp]: prime_factorize(n)) {\n    //         int sz = res.size();\n\
-    \    //         for(int i=0; i<sz; i++) {\n    //             int64_t now = res[i];\n\
-    \    //             while(exp--) {\n    //                 now *= p;\n    // \
-    \                std::cout << now << std::endl;\n    //                 res.emplace_back(now);\n\
-    \    //             }\n    //         }\n    //     }\n    //     sort(res.begin(),\
-    \ res.end());\n    //     return res;\n    // }\n\n    int64_t euler_phi(int64_t\
-    \ n) const {\n        assert(n > 0);\n        if(n < _n) return _euler_phi[n];\n\
-    \        int64_t res = n;\n        for(const auto [p, exp]: prime_factorize(n))\
-    \ {\n            res -= res/p;\n        }\n        return res;\n    }\n\n    //\
-    \ unverified\n    // int moebius_mu(int64_t n) const {\n    //     assert(n >\
-    \ 0);\n    //     if(n < _n) return _moebius_mu[n];\n    //     int res = 1;\n\
-    \    //     for(const auto [p, exp]: prime_factorize(n)) {\n    //         if(exp\
-    \ >= 2) return 0;\n    //         res *= -1;\n    //     }\n    //     return\
-    \ res;\n    // }\n};\n#line 5 \"aizu/ntl_1_d.test.cpp\"\n\nusing namespace std;\n\
-    \nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
+    \    // unverified\n    std::vector<int64_t> divisors(int64_t n) const {\n   \
+    \     assert(n > 0);\n        std::vector<int64_t> res = {1};\n        for(const\
+    \ auto [p, exp]: prime_factorize(n)) {\n            int sz = res.size();\n   \
+    \         for(int i=0; i<sz; i++) {\n                int64_t now = res[i];\n \
+    \               for(int j=0; j<exp; j++) {\n                    now *= p;\n  \
+    \                  res.emplace_back(now);\n                }\n            }\n\
+    \        }\n        sort(res.begin(), res.end());\n        return res;\n    }\n\
+    \n    int64_t euler_phi(int64_t n) const {\n        assert(n > 0);\n        if(n\
+    \ < _n) return _euler_phi[n];\n        int64_t res = n;\n        for(const auto\
+    \ [p, exp]: prime_factorize(n)) {\n            res -= res/p;\n        }\n    \
+    \    return res;\n    }\n\n    // unverified\n    // int moebius_mu(int64_t n)\
+    \ const {\n    //     assert(n > 0);\n    //     if(n < _n) return _moebius_mu[n];\n\
+    \    //     int res = 1;\n    //     for(const auto [p, exp]: prime_factorize(n))\
+    \ {\n    //         if(exp >= 2) return 0;\n    //         res *= -1;\n    //\
+    \     }\n    //     return res;\n    // }\n};\n#line 5 \"aizu/ntl_1_d.test.cpp\"\
+    \n\nusing namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
     \n    Sieve s;\n\n    int n;\n    cin >> n;\n\n    cout << s.euler_phi(n) << endl;\n\
     }\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/6/NTL/all/NTL_1_D\"\
@@ -71,7 +70,7 @@ data:
   isVerificationFile: true
   path: aizu/ntl_1_d.test.cpp
   requiredBy: []
-  timestamp: '2021-06-30 00:07:55+09:00'
+  timestamp: '2021-07-22 16:13:44+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: aizu/ntl_1_d.test.cpp
