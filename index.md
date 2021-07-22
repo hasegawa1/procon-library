@@ -39,7 +39,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: graph/breadth_first_search.cpp
       title: "\u5E45\u512A\u5148\u63A2\u7D22\uFF08BFS: Breadth First Search\uFF09"
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: graph/breadth_first_search_01.cpp
       title: 01-BFS
     - icon: ':heavy_check_mark:'
@@ -223,6 +223,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/planetary_exploration.test.cpp
       title: aizu/planetary_exploration.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/poison_swamp.test.cpp
+      title: aizu/poison_swamp.test.cpp
     - icon: ':heavy_check_mark:'
       path: aizu/railroad.test.cpp
       title: aizu/railroad.test.cpp
