@@ -68,23 +68,22 @@ public:
     }
 
     // unverified
-    // std::vector<int64_t> divisors(int64_t n) const {
-    //     assert(n > 0);
-    //     std::vector<int64_t> res = {1};
-    //     for(auto [p, exp]: prime_factorize(n)) {
-    //         int sz = res.size();
-    //         for(int i=0; i<sz; i++) {
-    //             int64_t now = res[i];
-    //             while(exp--) {
-    //                 now *= p;
-    //                 std::cout << now << std::endl;
-    //                 res.emplace_back(now);
-    //             }
-    //         }
-    //     }
-    //     sort(res.begin(), res.end());
-    //     return res;
-    // }
+    std::vector<int64_t> divisors(int64_t n) const {
+        assert(n > 0);
+        std::vector<int64_t> res = {1};
+        for(const auto [p, exp]: prime_factorize(n)) {
+            int sz = res.size();
+            for(int i=0; i<sz; i++) {
+                int64_t now = res[i];
+                for(int j=0; j<exp; j++) {
+                    now *= p;
+                    res.emplace_back(now);
+                }
+            }
+        }
+        sort(res.begin(), res.end());
+        return res;
+    }
 
     int64_t euler_phi(int64_t n) const {
         assert(n > 0);
