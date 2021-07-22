@@ -101,6 +101,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/Imos2.cpp
       title: "2\u6B21\u5143imos\u6CD5"
+    - icon: ':warning:'
+      path: other/binary_search.cpp
+      title: "\u4E8C\u5206\u63A2\u7D22"
     - icon: ':heavy_check_mark:'
       path: other/inversion_number.cpp
       title: "\u8EE2\u5012\u6570"
