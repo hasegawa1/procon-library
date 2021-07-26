@@ -1,7 +1,7 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_4_A"
 
 #include <iostream>
-#include "../graph/detect_cycle.cpp"
+#include "../graph/topological_sort.cpp"
 
 using namespace std;
 
@@ -18,5 +18,5 @@ int main(void) {
         g[s].emplace_back(t);
     }
 
-    cout << !detect_cycle(g).empty() << endl;
+    cout << topological_sort(g).empty() << endl;
 }
