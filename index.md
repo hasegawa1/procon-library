@@ -81,6 +81,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: number-theory/Sieve.cpp
       title: "\u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9"
+    - icon: ':warning:'
+      path: number-theory/quotient_ranges.cpp
+      title: "\u5546\u5217\u6319"
   - name: other
     pages:
     - icon: ':heavy_check_mark:'
