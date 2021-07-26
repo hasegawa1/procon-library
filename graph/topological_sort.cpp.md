@@ -7,8 +7,8 @@ data:
     title: "DAG\u306E\u5230\u9054\u53EF\u80FD\u6027"
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: aizu/grl_4_a.test.cpp
-    title: aizu/grl_4_a.test.cpp
+    path: aizu/grl_4_a_topo.test.cpp
+    title: aizu/grl_4_a_topo.test.cpp
   - icon: ':heavy_check_mark:'
     path: aizu/railroad.test.cpp
     title: aizu/railroad.test.cpp
@@ -48,7 +48,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - aizu/railroad.test.cpp
-  - aizu/grl_4_a.test.cpp
+  - aizu/grl_4_a_topo.test.cpp
 documentation_of: graph/topological_sort.cpp
 layout: document
 redirect_from:

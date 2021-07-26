@@ -43,6 +43,9 @@ data:
       path: graph/breadth_first_search_01.cpp
       title: 01-BFS
     - icon: ':heavy_check_mark:'
+      path: graph/detect_cycle.cpp
+      title: "\u9589\u8DEF\u691C\u51FA"
+    - icon: ':heavy_check_mark:'
       path: graph/dijkstra.cpp
       title: "\u5358\u4E00\u59CB\u70B9\u6700\u77ED\u7D4C\u8DEF\u9577\uFF08Dijkstra\uFF09"
     - icon: ':heavy_check_mark:'
@@ -206,6 +209,9 @@ data:
       path: aizu/grl_4_a.test.cpp
       title: aizu/grl_4_a.test.cpp
     - icon: ':heavy_check_mark:'
+      path: aizu/grl_4_a_topo.test.cpp
+      title: aizu/grl_4_a_topo.test.cpp
+    - icon: ':heavy_check_mark:'
       path: aizu/grl_5_a.test.cpp
       title: aizu/grl_5_a.test.cpp
     - icon: ':heavy_check_mark:'
@@ -237,6 +243,9 @@ data:
       title: aizu/railroad.test.cpp
   - name: yosupo
     pages:
+    - icon: ':heavy_check_mark:'
+      path: yosupo/cycle_detection.test.cpp
+      title: yosupo/cycle_detection.test.cpp
     - icon: ':heavy_check_mark:'
       path: yosupo/lowest_common_ancestor.test.cpp
       title: yosupo/lowest_common_ancestor.test.cpp
