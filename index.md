@@ -124,9 +124,6 @@ data:
     - icon: ':warning:'
       path: string/next_array.cpp
       title: next_array
-    - icon: ':warning:'
-      path: string/string_search.cpp
-      title: "\u6587\u5B57\u5217\u691C\u7D22"
     - icon: ':heavy_check_mark:'
       path: string/string_search_sa.cpp
       title: "\u6587\u5B57\u5217\u691C\u7D22\uFF08Suffix Array\uFF09"
