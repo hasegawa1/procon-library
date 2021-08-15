@@ -121,6 +121,9 @@ data:
       title: "\u533A\u9593\u30B9\u30B1\u30B8\u30E5\u30FC\u30EA\u30F3\u30B0\u554F\u984C"
   - name: string
     pages:
+    - icon: ':heavy_check_mark:'
+      path: string/longest_common_substring.cpp
+      title: "\u6700\u9577\u5171\u901A\u90E8\u5206\u6587\u5B57\u5217"
     - icon: ':warning:'
       path: string/next_array.cpp
       title: next_array
@@ -246,6 +249,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/itp1_3_d.test.cpp
       title: aizu/itp1_3_d.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/longest_common_substring.test.cpp
+      title: aizu/longest_common_substring.test.cpp
     - icon: ':heavy_check_mark:'
       path: aizu/ntl_1_a.test.cpp
       title: aizu/ntl_1_a.test.cpp
