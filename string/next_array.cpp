@@ -3,6 +3,8 @@
  * @author hasegawa1
  */
 
+// verify: https://atcoder.jp/contests/abc214/submissions/25069137
+
 #include <vector>
 #include <string>
 
