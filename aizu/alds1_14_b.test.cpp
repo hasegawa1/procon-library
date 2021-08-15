@@ -1,7 +1,7 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/lesson/1/ALDS1/all/ALDS1_14_B"
 
 #include <iostream>
-#include "../string/string_search.cpp"
+#include "../string/string_search_z.cpp"
 
 using namespace std;
 
