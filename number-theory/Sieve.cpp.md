@@ -97,10 +97,10 @@ data:
   timestamp: '2021-07-22 16:28:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - aizu/ntl_1_d.test.cpp
-  - aizu/itp1_3_d.test.cpp
   - aizu/alds1_1_c.test.cpp
+  - aizu/itp1_3_d.test.cpp
   - aizu/ntl_1_a.test.cpp
+  - aizu/ntl_1_d.test.cpp
 documentation_of: number-theory/Sieve.cpp
 layout: document
 redirect_from:

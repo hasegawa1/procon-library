@@ -121,9 +121,9 @@ data:
   timestamp: '2021-07-21 14:32:00+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - yosupo/lowest_common_ancestor.test.cpp
   - aizu/grl_5_c.test.cpp
   - aizu/festivals_in_joi_kingdom.test.cpp
-  - yosupo/lowest_common_ancestor.test.cpp
 documentation_of: tree/LowestCommonAncestor.cpp
 layout: document
 redirect_from:
