@@ -2,16 +2,10 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
-    path: aizu/alds1_14_a.test.cpp
-    title: aizu/alds1_14_a.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: aizu/alds1_14_b.test.cpp
-    title: aizu/alds1_14_b.test.cpp
+  _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':warning:'
   attributes:
     document_title: "\u6587\u5B57\u5217\u691C\u7D22"
     links: []
@@ -34,10 +28,8 @@ data:
   path: string/string_search.cpp
   requiredBy: []
   timestamp: '2021-08-15 12:10:35+09:00'
-  verificationStatus: LIBRARY_ALL_AC
-  verifiedWith:
-  - aizu/alds1_14_b.test.cpp
-  - aizu/alds1_14_a.test.cpp
+  verificationStatus: LIBRARY_NO_TESTS
+  verifiedWith: []
 documentation_of: string/string_search.cpp
 layout: document
 redirect_from:

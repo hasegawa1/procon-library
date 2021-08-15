@@ -124,9 +124,15 @@ data:
     - icon: ':warning:'
       path: string/next_array.cpp
       title: next_array
-    - icon: ':heavy_check_mark:'
+    - icon: ':warning:'
       path: string/string_search.cpp
       title: "\u6587\u5B57\u5217\u691C\u7D22"
+    - icon: ':heavy_check_mark:'
+      path: string/string_search_sa.cpp
+      title: "\u6587\u5B57\u5217\u691C\u7D22\uFF08Suffix Array\uFF09"
+    - icon: ':heavy_check_mark:'
+      path: string/string_search_z.cpp
+      title: "\u6587\u5B57\u5217\u691C\u7D22\uFF08z-algorithm\uFF09"
   - name: tree
     pages:
     - icon: ':heavy_check_mark:'
@@ -150,6 +156,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/alds1_14_b.test.cpp
       title: aizu/alds1_14_b.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/alds1_14_d.test.cpp
+      title: aizu/alds1_14_d.test.cpp
     - icon: ':heavy_check_mark:'
       path: aizu/alds1_15_c.test.cpp
       title: aizu/alds1_15_c.test.cpp
