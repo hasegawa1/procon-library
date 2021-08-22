@@ -51,10 +51,20 @@ public:
         return std::distance(_compress.begin(), itr);
     }
 
-    const std::vector<int> get_all(const std::vector<int>& g) {
+    const std::vector<int> get_all(const std::vector<T>& g) {
         std::vector<int> res;
         std::transform(g.begin(), g.end(), std::back_inserter(res), [&](const T & x) {return get(x);});
         return res;
+    }
+
+    int lower_bound(const T &g) {
+        if(!_is_ready) build();
+        return std::distance(_compress.begin(), std::lower_bound(_compress.begin(), _compress.end(), g));
+    }
+
+    int upper_bound(const T &g) {
+        if(!_is_ready) build();
+        return std::distance(_compress.begin(), std::upper_bound(_compress.begin(), _compress.end(), g));
     }
 
     int operator()(const T& g) {
