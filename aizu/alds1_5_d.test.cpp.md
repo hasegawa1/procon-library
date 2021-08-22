@@ -34,12 +34,16 @@ data:
     \  if(!_is_ready) build();\n        auto itr = std::lower_bound(_compress.begin(),\
     \ _compress.end(), g);\n        assert(itr != _compress.end());\n        assert(*itr\
     \ == g);\n        return std::distance(_compress.begin(), itr);\n    }\n\n   \
-    \ const std::vector<int> get_all(const std::vector<int>& g) {\n        std::vector<int>\
+    \ const std::vector<int> get_all(const std::vector<T>& g) {\n        std::vector<int>\
     \ res;\n        std::transform(g.begin(), g.end(), std::back_inserter(res), [&](const\
-    \ T & x) {return get(x);});\n        return res;\n    }\n\n    int operator()(const\
-    \ T& g) {\n        return get(g);\n    }\n\n    const T& operator[](int k) {\n\
-    \        if(!_is_ready) build();\n        assert(0 <= k);\n        assert(k <\
-    \ size());\n        return _compress[k];\n    }\n};\n#line 1 \"other/inversion_number.cpp\"\
+    \ T & x) {return get(x);});\n        return res;\n    }\n\n    int lower_bound(const\
+    \ T &g) {\n        if(!_is_ready) build();\n        return std::distance(_compress.begin(),\
+    \ std::lower_bound(_compress.begin(), _compress.end(), g));\n    }\n\n    int\
+    \ upper_bound(const T &g) {\n        if(!_is_ready) build();\n        return std::distance(_compress.begin(),\
+    \ std::upper_bound(_compress.begin(), _compress.end(), g));\n    }\n\n    int\
+    \ operator()(const T& g) {\n        return get(g);\n    }\n\n    const T& operator[](int\
+    \ k) {\n        if(!_is_ready) build();\n        assert(0 <= k);\n        assert(k\
+    \ < size());\n        return _compress[k];\n    }\n};\n#line 1 \"other/inversion_number.cpp\"\
     \n/**\n * @brief \u8EE2\u5012\u6570\n * @author hasegawa1\n */\n\n#line 8 \"other/inversion_number.cpp\"\
     \n#include <cstdint>\n#include <atcoder/fenwicktree>\n\nint64_t inversion_number(const\
     \ std::vector<int> & v) {\n    const int N = v.size();\n    const int M = *std::max_element(v.begin(),\
@@ -62,7 +66,7 @@ data:
   isVerificationFile: true
   path: aizu/alds1_5_d.test.cpp
   requiredBy: []
-  timestamp: '2021-06-29 19:20:38+09:00'
+  timestamp: '2021-08-22 21:17:08+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: aizu/alds1_5_d.test.cpp
