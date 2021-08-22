@@ -30,6 +30,12 @@ data:
       path: dp/longest_increasing_subsequence.cpp
       title: "\u6700\u9577\u5897\u52A0\u90E8\u5206\u5217\uFF08LIS: Longest Increasing\
         \ Subsequence\uFF09"
+  - name: flow
+    pages:
+    - icon: ':warning:'
+      path: flow/mcf_dag.cpp
+      title: "DAG\u4E0A\u306E\u6700\u5C0F\u8CBB\u7528\u6D41\uFF08\u8CA0\u8FBA\u53EF\
+        \uFF09"
   - name: graph
     pages:
     - icon: ':heavy_check_mark:'
