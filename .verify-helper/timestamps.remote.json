@@ -34,6 +34,7 @@
 "aizu/illumination.test.cpp": "2021-07-20 00:08:12 +0900",
 "aizu/illumination_string.test.cpp": "2021-07-20 00:08:12 +0900",
 "aizu/itp1_3_d.test.cpp": "2021-07-22 16:28:41 +0900",
+"aizu/longest_common_substring.test.cpp": "2021-08-15 13:35:05 +0900",
 "aizu/ntl_1_a.test.cpp": "2021-07-22 16:28:41 +0900",
 "aizu/ntl_1_d.test.cpp": "2021-07-22 16:28:41 +0900",
 "aizu/planetary_exploration.test.cpp": "2021-06-30 00:48:20 +0900",
