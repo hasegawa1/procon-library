@@ -39,24 +39,25 @@ data:
     \ {\n                if((i&j) == 0) v[j] -= v[j|i];\n            }\n        }\n\
     \    }\n\n    return v;\n}\n#line 10 \"convolution/and_convolution.cpp\"\n\ntemplate<typename\
     \ T>\nstd::vector<T> and_convolution(const std::vector<T> &a, const std::vector<T>\
-    \ &b) {\n    auto sum_a = zeta_transform(a, false);\n    auto sum_b = zeta_transform(b,\
-    \ false);\n    std::vector<T> sum_c;\n    std::transform(sum_a.begin(), sum_a.end(),\
-    \ sum_b.begin(), std::back_inserter(sum_c), std::multiplies<T>());\n    return\
-    \ moebius_transform(sum_c, false);\n}\n"
-  code: "/**\n * @brief Bitwise And Convolution\n * @author hasegawa1\n */\n\n#include\
-    \ <vector>\n#include <algorithm>\n#include \"./zeta_transform.cpp\"\n#include\
-    \ \"./moebius_transform.cpp\"\n\ntemplate<typename T>\nstd::vector<T> and_convolution(const\
-    \ std::vector<T> &a, const std::vector<T> &b) {\n    auto sum_a = zeta_transform(a,\
+    \ &b) {\n    assert(a.size() == b.size());\n    auto sum_a = zeta_transform(a,\
     \ false);\n    auto sum_b = zeta_transform(b, false);\n    std::vector<T> sum_c;\n\
     \    std::transform(sum_a.begin(), sum_a.end(), sum_b.begin(), std::back_inserter(sum_c),\
     \ std::multiplies<T>());\n    return moebius_transform(sum_c, false);\n}\n"
+  code: "/**\n * @brief Bitwise And Convolution\n * @author hasegawa1\n */\n\n#include\
+    \ <vector>\n#include <algorithm>\n#include \"./zeta_transform.cpp\"\n#include\
+    \ \"./moebius_transform.cpp\"\n\ntemplate<typename T>\nstd::vector<T> and_convolution(const\
+    \ std::vector<T> &a, const std::vector<T> &b) {\n    assert(a.size() == b.size());\n\
+    \    auto sum_a = zeta_transform(a, false);\n    auto sum_b = zeta_transform(b,\
+    \ false);\n    std::vector<T> sum_c;\n    std::transform(sum_a.begin(), sum_a.end(),\
+    \ sum_b.begin(), std::back_inserter(sum_c), std::multiplies<T>());\n    return\
+    \ moebius_transform(sum_c, false);\n}\n"
   dependsOn:
   - convolution/zeta_transform.cpp
   - convolution/moebius_transform.cpp
   isVerificationFile: false
   path: convolution/and_convolution.cpp
   requiredBy: []
-  timestamp: '2021-08-23 17:03:50+09:00'
+  timestamp: '2021-08-24 01:07:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - yosupo/bitwise_and_convolution.test.cpp

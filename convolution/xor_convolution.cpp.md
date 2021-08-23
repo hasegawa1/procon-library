@@ -28,23 +28,24 @@ data:
     \    }\n\n    if(rev) {\n        T inv = T(1) / n;\n        for(auto &e: v) e\
     \ *= inv;\n    }\n\n    return v;\n}\n#line 9 \"convolution/xor_convolution.cpp\"\
     \n\ntemplate<typename T>\nstd::vector<T> xor_convolution(const std::vector<T>\
-    \ &a, const std::vector<T> &b) {\n    auto sum_a = hadamard_transform(a, false);\n\
-    \    auto sum_b = hadamard_transform(b, false);\n    std::vector<T> sum_c;\n \
-    \   std::transform(sum_a.begin(), sum_a.end(), sum_b.begin(), std::back_inserter(sum_c),\
-    \ std::multiplies<T>());\n    return hadamard_transform(sum_c, true);\n}\n"
-  code: "/**\n * @brief Bitwise Xor Convolution\n * @author hasegawa1\n */\n\n#include\
-    \ <vector>\n#include <algorithm>\n#include \"./hadamard_transform.cpp\"\n\ntemplate<typename\
-    \ T>\nstd::vector<T> xor_convolution(const std::vector<T> &a, const std::vector<T>\
-    \ &b) {\n    auto sum_a = hadamard_transform(a, false);\n    auto sum_b = hadamard_transform(b,\
+    \ &a, const std::vector<T> &b) {\n    assert(a.size() == b.size());\n    auto\
+    \ sum_a = hadamard_transform(a, false);\n    auto sum_b = hadamard_transform(b,\
     \ false);\n    std::vector<T> sum_c;\n    std::transform(sum_a.begin(), sum_a.end(),\
     \ sum_b.begin(), std::back_inserter(sum_c), std::multiplies<T>());\n    return\
     \ hadamard_transform(sum_c, true);\n}\n"
+  code: "/**\n * @brief Bitwise Xor Convolution\n * @author hasegawa1\n */\n\n#include\
+    \ <vector>\n#include <algorithm>\n#include \"./hadamard_transform.cpp\"\n\ntemplate<typename\
+    \ T>\nstd::vector<T> xor_convolution(const std::vector<T> &a, const std::vector<T>\
+    \ &b) {\n    assert(a.size() == b.size());\n    auto sum_a = hadamard_transform(a,\
+    \ false);\n    auto sum_b = hadamard_transform(b, false);\n    std::vector<T>\
+    \ sum_c;\n    std::transform(sum_a.begin(), sum_a.end(), sum_b.begin(), std::back_inserter(sum_c),\
+    \ std::multiplies<T>());\n    return hadamard_transform(sum_c, true);\n}\n"
   dependsOn:
   - convolution/hadamard_transform.cpp
   isVerificationFile: false
   path: convolution/xor_convolution.cpp
   requiredBy: []
-  timestamp: '2021-08-23 17:04:51+09:00'
+  timestamp: '2021-08-24 01:07:25+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - yosupo/bitwise_xor_convolution.test.cpp

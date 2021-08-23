@@ -42,7 +42,7 @@ data:
   isVerificationFile: true
   path: yosupo/bitwise_xor_convolution.test.cpp
   requiredBy: []
-  timestamp: '2021-08-23 17:04:51+09:00'
+  timestamp: '2021-08-24 01:07:25+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: yosupo/bitwise_xor_convolution.test.cpp
