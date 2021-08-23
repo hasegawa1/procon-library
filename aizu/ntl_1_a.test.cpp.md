@@ -49,8 +49,37 @@ data:
     \n    int64_t euler_phi(int64_t n) const {\n        assert(n > 0);\n        if(n\
     \ < _n) return _euler_phi[n];\n        int64_t res = n;\n        for(const auto\
     \ [p, exp]: prime_factorize(n)) {\n            res -= res/p;\n        }\n    \
-    \    return res;\n    }\n};\n#line 5 \"aizu/ntl_1_a.test.cpp\"\n\nusing namespace\
-    \ std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
+    \    return res;\n    }\n\n    template<typename T>\n    std::vector<T> divisor_transform(std::vector<T>\
+    \ v) {\n        int n = v.size();\n        assert(n <= _n);\n        for(int i=2;\
+    \ i<n; i++) {\n            if(is_prime(i)) {\n                for(int j=1; i*j<n;\
+    \ j++) {\n                    v[j * i] += v[j];\n                }\n         \
+    \   }\n        }\n        return v;\n    }\n\n    template<typename T>\n    std::vector<T>\
+    \ inverse_divisor_transform(std::vector<T> v) {\n        int n = v.size();\n \
+    \       assert(n <= _n);\n        for(int i=2; i<n; i++) {\n            if(is_prime(i))\
+    \ {\n                for(int j=(n-1)/i; j>0; j--) {\n                    v[j *\
+    \ i] -= v[j];\n                }\n            }\n        }\n        return v;\n\
+    \    }\n\n    template<typename T>\n    std::vector<T> multiple_transform(std::vector<T>\
+    \ v) {\n        int n = v.size();\n        assert(n <= _n);\n        for(int i=2;\
+    \ i<n; i++) {\n            if(is_prime(i)) {\n                for(int j=(n-1)/i;\
+    \ j>0; j--) {\n                    v[j] += v[j * i];\n                }\n    \
+    \        }\n        }\n        return v;\n    }\n\n\n    template<typename T>\n\
+    \    std::vector<T> inverse_multiple_transform(std::vector<T> v) {\n        int\
+    \ n = v.size();\n        assert(n <= _n);\n        for(int i=2; i<n; i++) {\n\
+    \            if(is_prime(i)) {\n                for(int j=1; i*j<n; j++) {\n \
+    \                   v[j] -= v[j * i];\n                }\n            }\n    \
+    \    }\n        return v;\n    }\n\n    template<typename T>\n    std::vector<T>\
+    \ gcd_convolution(const std::vector<T> &a, const std::vector<T> &b) {\n      \
+    \  assert(a.size() == b.size());\n        auto sum_a = multiple_transform(a);\n\
+    \        auto sum_b = multiple_transform(b);\n        std::vector<T> sum_c;\n\
+    \        std::transform(sum_a.begin(), sum_a.end(), sum_b.begin(), std::back_inserter(sum_c),\
+    \ std::multiplies<T>());\n        return inverse_multiple_transform(sum_c);\n\
+    \    }\n\n    template<typename T>\n    std::vector<T> lcm_convolution(const std::vector<T>\
+    \ &a, const std::vector<T> &b) {\n        assert(a.size() == b.size());\n    \
+    \    auto sum_a = divisor_transform(a);\n        auto sum_b = divisor_transform(b);\n\
+    \        std::vector<T> sum_c;\n        std::transform(sum_a.begin(), sum_a.end(),\
+    \ sum_b.begin(), std::back_inserter(sum_c), std::multiplies<T>());\n        return\
+    \ inverse_divisor_transform(sum_c);\n    }\n};\n#line 5 \"aizu/ntl_1_a.test.cpp\"\
+    \n\nusing namespace std;\n\nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
     \n    Sieve s;\n\n    int n;\n    cin >> n;\n\n    cout << n << ':';\n    for(auto\
     \ [key, val]: s.prime_factorize(n)) {\n        while(val--) {\n            cout\
     \ << ' ' << key;\n        }\n    }\n    cout << endl;\n}\n"
@@ -65,7 +94,7 @@ data:
   isVerificationFile: true
   path: aizu/ntl_1_a.test.cpp
   requiredBy: []
-  timestamp: '2021-07-22 16:28:41+09:00'
+  timestamp: '2021-08-24 00:57:11+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: aizu/ntl_1_a.test.cpp

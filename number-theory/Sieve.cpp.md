@@ -15,6 +15,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: aizu/ntl_1_d.test.cpp
     title: aizu/ntl_1_d.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: yukicoder/886.test.cpp
+    title: yukicoder/886.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -55,7 +58,36 @@ data:
     \n    int64_t euler_phi(int64_t n) const {\n        assert(n > 0);\n        if(n\
     \ < _n) return _euler_phi[n];\n        int64_t res = n;\n        for(const auto\
     \ [p, exp]: prime_factorize(n)) {\n            res -= res/p;\n        }\n    \
-    \    return res;\n    }\n};\n"
+    \    return res;\n    }\n\n    template<typename T>\n    std::vector<T> divisor_transform(std::vector<T>\
+    \ v) {\n        int n = v.size();\n        assert(n <= _n);\n        for(int i=2;\
+    \ i<n; i++) {\n            if(is_prime(i)) {\n                for(int j=1; i*j<n;\
+    \ j++) {\n                    v[j * i] += v[j];\n                }\n         \
+    \   }\n        }\n        return v;\n    }\n\n    template<typename T>\n    std::vector<T>\
+    \ inverse_divisor_transform(std::vector<T> v) {\n        int n = v.size();\n \
+    \       assert(n <= _n);\n        for(int i=2; i<n; i++) {\n            if(is_prime(i))\
+    \ {\n                for(int j=(n-1)/i; j>0; j--) {\n                    v[j *\
+    \ i] -= v[j];\n                }\n            }\n        }\n        return v;\n\
+    \    }\n\n    template<typename T>\n    std::vector<T> multiple_transform(std::vector<T>\
+    \ v) {\n        int n = v.size();\n        assert(n <= _n);\n        for(int i=2;\
+    \ i<n; i++) {\n            if(is_prime(i)) {\n                for(int j=(n-1)/i;\
+    \ j>0; j--) {\n                    v[j] += v[j * i];\n                }\n    \
+    \        }\n        }\n        return v;\n    }\n\n\n    template<typename T>\n\
+    \    std::vector<T> inverse_multiple_transform(std::vector<T> v) {\n        int\
+    \ n = v.size();\n        assert(n <= _n);\n        for(int i=2; i<n; i++) {\n\
+    \            if(is_prime(i)) {\n                for(int j=1; i*j<n; j++) {\n \
+    \                   v[j] -= v[j * i];\n                }\n            }\n    \
+    \    }\n        return v;\n    }\n\n    template<typename T>\n    std::vector<T>\
+    \ gcd_convolution(const std::vector<T> &a, const std::vector<T> &b) {\n      \
+    \  assert(a.size() == b.size());\n        auto sum_a = multiple_transform(a);\n\
+    \        auto sum_b = multiple_transform(b);\n        std::vector<T> sum_c;\n\
+    \        std::transform(sum_a.begin(), sum_a.end(), sum_b.begin(), std::back_inserter(sum_c),\
+    \ std::multiplies<T>());\n        return inverse_multiple_transform(sum_c);\n\
+    \    }\n\n    template<typename T>\n    std::vector<T> lcm_convolution(const std::vector<T>\
+    \ &a, const std::vector<T> &b) {\n        assert(a.size() == b.size());\n    \
+    \    auto sum_a = divisor_transform(a);\n        auto sum_b = divisor_transform(b);\n\
+    \        std::vector<T> sum_c;\n        std::transform(sum_a.begin(), sum_a.end(),\
+    \ sum_b.begin(), std::back_inserter(sum_c), std::multiplies<T>());\n        return\
+    \ inverse_divisor_transform(sum_c);\n    }\n};\n"
   code: "/**\n * @brief \u30A8\u30E9\u30C8\u30B9\u30C6\u30CD\u30B9\u306E\u7BE9\n *\
     \ @author hasegawa1\n */\n\n#include <vector>\n#include <algorithm>\n#include\
     \ <numeric>\n#include <cstdint>\n#include <cassert>\n#include <atcoder/internal_math>\n\
@@ -89,18 +121,48 @@ data:
     \n    int64_t euler_phi(int64_t n) const {\n        assert(n > 0);\n        if(n\
     \ < _n) return _euler_phi[n];\n        int64_t res = n;\n        for(const auto\
     \ [p, exp]: prime_factorize(n)) {\n            res -= res/p;\n        }\n    \
-    \    return res;\n    }\n};\n"
+    \    return res;\n    }\n\n    template<typename T>\n    std::vector<T> divisor_transform(std::vector<T>\
+    \ v) {\n        int n = v.size();\n        assert(n <= _n);\n        for(int i=2;\
+    \ i<n; i++) {\n            if(is_prime(i)) {\n                for(int j=1; i*j<n;\
+    \ j++) {\n                    v[j * i] += v[j];\n                }\n         \
+    \   }\n        }\n        return v;\n    }\n\n    template<typename T>\n    std::vector<T>\
+    \ inverse_divisor_transform(std::vector<T> v) {\n        int n = v.size();\n \
+    \       assert(n <= _n);\n        for(int i=2; i<n; i++) {\n            if(is_prime(i))\
+    \ {\n                for(int j=(n-1)/i; j>0; j--) {\n                    v[j *\
+    \ i] -= v[j];\n                }\n            }\n        }\n        return v;\n\
+    \    }\n\n    template<typename T>\n    std::vector<T> multiple_transform(std::vector<T>\
+    \ v) {\n        int n = v.size();\n        assert(n <= _n);\n        for(int i=2;\
+    \ i<n; i++) {\n            if(is_prime(i)) {\n                for(int j=(n-1)/i;\
+    \ j>0; j--) {\n                    v[j] += v[j * i];\n                }\n    \
+    \        }\n        }\n        return v;\n    }\n\n\n    template<typename T>\n\
+    \    std::vector<T> inverse_multiple_transform(std::vector<T> v) {\n        int\
+    \ n = v.size();\n        assert(n <= _n);\n        for(int i=2; i<n; i++) {\n\
+    \            if(is_prime(i)) {\n                for(int j=1; i*j<n; j++) {\n \
+    \                   v[j] -= v[j * i];\n                }\n            }\n    \
+    \    }\n        return v;\n    }\n\n    template<typename T>\n    std::vector<T>\
+    \ gcd_convolution(const std::vector<T> &a, const std::vector<T> &b) {\n      \
+    \  assert(a.size() == b.size());\n        auto sum_a = multiple_transform(a);\n\
+    \        auto sum_b = multiple_transform(b);\n        std::vector<T> sum_c;\n\
+    \        std::transform(sum_a.begin(), sum_a.end(), sum_b.begin(), std::back_inserter(sum_c),\
+    \ std::multiplies<T>());\n        return inverse_multiple_transform(sum_c);\n\
+    \    }\n\n    template<typename T>\n    std::vector<T> lcm_convolution(const std::vector<T>\
+    \ &a, const std::vector<T> &b) {\n        assert(a.size() == b.size());\n    \
+    \    auto sum_a = divisor_transform(a);\n        auto sum_b = divisor_transform(b);\n\
+    \        std::vector<T> sum_c;\n        std::transform(sum_a.begin(), sum_a.end(),\
+    \ sum_b.begin(), std::back_inserter(sum_c), std::multiplies<T>());\n        return\
+    \ inverse_divisor_transform(sum_c);\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: number-theory/Sieve.cpp
   requiredBy: []
-  timestamp: '2021-07-22 16:28:41+09:00'
+  timestamp: '2021-08-24 00:57:11+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - aizu/alds1_1_c.test.cpp
   - aizu/itp1_3_d.test.cpp
   - aizu/ntl_1_a.test.cpp
   - aizu/ntl_1_d.test.cpp
+  - yukicoder/886.test.cpp
 documentation_of: number-theory/Sieve.cpp
 layout: document
 redirect_from:

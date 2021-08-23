@@ -319,6 +319,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: yosupo/static_range_sum.test.cpp
       title: yosupo/static_range_sum.test.cpp
+  - name: yukicoder
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: yukicoder/886.test.cpp
+      title: yukicoder/886.test.cpp
 layout: toppage
 ---
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
