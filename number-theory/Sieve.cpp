@@ -89,4 +89,81 @@ public:
         }
         return res;
     }
+
+    template<typename T>
+    std::vector<T> divisor_transform(std::vector<T> v) {
+        int n = v.size();
+        assert(n <= _n);
+        for(int i=2; i<n; i++) {
+            if(is_prime(i)) {
+                for(int j=1; i*j<n; j++) {
+                    v[j * i] += v[j];
+                }
+            }
+        }
+        return v;
+    }
+
+    template<typename T>
+    std::vector<T> inverse_divisor_transform(std::vector<T> v) {
+        int n = v.size();
+        assert(n <= _n);
+        for(int i=2; i<n; i++) {
+            if(is_prime(i)) {
+                for(int j=(n-1)/i; j>0; j--) {
+                    v[j * i] -= v[j];
+                }
+            }
+        }
+        return v;
+    }
+
+    template<typename T>
+    std::vector<T> multiple_transform(std::vector<T> v) {
+        int n = v.size();
+        assert(n <= _n);
+        for(int i=2; i<n; i++) {
+            if(is_prime(i)) {
+                for(int j=(n-1)/i; j>0; j--) {
+                    v[j] += v[j * i];
+                }
+            }
+        }
+        return v;
+    }
+
+
+    template<typename T>
+    std::vector<T> inverse_multiple_transform(std::vector<T> v) {
+        int n = v.size();
+        assert(n <= _n);
+        for(int i=2; i<n; i++) {
+            if(is_prime(i)) {
+                for(int j=1; i*j<n; j++) {
+                    v[j] -= v[j * i];
+                }
+            }
+        }
+        return v;
+    }
+
+    template<typename T>
+    std::vector<T> gcd_convolution(const std::vector<T> &a, const std::vector<T> &b) {
+        assert(a.size() == b.size());
+        auto sum_a = multiple_transform(a);
+        auto sum_b = multiple_transform(b);
+        std::vector<T> sum_c;
+        std::transform(sum_a.begin(), sum_a.end(), sum_b.begin(), std::back_inserter(sum_c), std::multiplies<T>());
+        return inverse_multiple_transform(sum_c);
+    }
+
+    template<typename T>
+    std::vector<T> lcm_convolution(const std::vector<T> &a, const std::vector<T> &b) {
+        assert(a.size() == b.size());
+        auto sum_a = divisor_transform(a);
+        auto sum_b = divisor_transform(b);
+        std::vector<T> sum_c;
+        std::transform(sum_a.begin(), sum_a.end(), sum_b.begin(), std::back_inserter(sum_c), std::multiplies<T>());
+        return inverse_divisor_transform(sum_c);
+    }
 };
