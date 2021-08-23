@@ -15,11 +15,17 @@ data:
       path: convolution/and_convolution.cpp
       title: Bitwise And Convolution
     - icon: ':heavy_check_mark:'
+      path: convolution/hadamard_transform.cpp
+      title: "\u9AD8\u901F\u30A2\u30C0\u30DE\u30FC\u30EB\u5909\u63DB"
+    - icon: ':heavy_check_mark:'
       path: convolution/moebius_transform.cpp
       title: "\u9AD8\u901F\u30E1\u30D3\u30A6\u30B9\u5909\u63DB"
     - icon: ':warning:'
       path: convolution/or_convolution.cpp
       title: Bitwise Or Convolution
+    - icon: ':heavy_check_mark:'
+      path: convolution/xor_convolution.cpp
+      title: Bitwise Xor Convolution
     - icon: ':heavy_check_mark:'
       path: convolution/zeta_transform.cpp
       title: "\u9AD8\u901F\u30BC\u30FC\u30BF\u5909\u63DB"
@@ -292,6 +298,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: yosupo/bitwise_and_convolution.test.cpp
       title: yosupo/bitwise_and_convolution.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: yosupo/bitwise_xor_convolution.test.cpp
+      title: yosupo/bitwise_xor_convolution.test.cpp
     - icon: ':heavy_check_mark:'
       path: yosupo/cycle_detection.test.cpp
       title: yosupo/cycle_detection.test.cpp

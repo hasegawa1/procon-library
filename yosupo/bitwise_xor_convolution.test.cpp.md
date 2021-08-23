@@ -2,14 +2,11 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: convolution/and_convolution.cpp
-    title: Bitwise And Convolution
+    path: convolution/hadamard_transform.cpp
+    title: "\u9AD8\u901F\u30A2\u30C0\u30DE\u30FC\u30EB\u5909\u63DB"
   - icon: ':heavy_check_mark:'
-    path: convolution/moebius_transform.cpp
-    title: "\u9AD8\u901F\u30E1\u30D3\u30A6\u30B9\u5909\u63DB"
-  - icon: ':heavy_check_mark:'
-    path: convolution/zeta_transform.cpp
-    title: "\u9AD8\u901F\u30BC\u30FC\u30BF\u5909\u63DB"
+    path: convolution/xor_convolution.cpp
+    title: Bitwise Xor Convolution
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _isVerificationFailed: false
@@ -17,9 +14,9 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/bitwise_and_convolution
+    PROBLEM: https://judge.yosupo.jp/problem/bitwise_xor_convolution
     links:
-    - https://judge.yosupo.jp/problem/bitwise_and_convolution
+    - https://judge.yosupo.jp/problem/bitwise_xor_convolution
   bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.9.6/x64/lib/python3.9/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
@@ -29,30 +26,29 @@ data:
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: atcoder/modint:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/bitwise_and_convolution\"\
-    \n\n#include <iostream>\n#include \"../convolution/and_convolution.cpp\"\n#include\
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/bitwise_xor_convolution\"\
+    \n\n#include <iostream>\n#include \"../convolution/xor_convolution.cpp\"\n#include\
     \ \"atcoder/modint\"\n\nusing namespace std;\nusing mint = atcoder::modint998244353;\n\
     \nint main(void) {\n    cin.tie(nullptr);\n    ios_base::sync_with_stdio(false);\n\
     \n    int N;\n    cin >> N;\n    vector<mint> a(1<<N), b(1<<N);\n    for(int i=0;\
     \ i<(1<<N); i++) {\n        int x;\n        cin >> x;\n        a[i] = x;\n   \
     \ }\n    for(int i=0; i<(1<<N); i++) {\n        int x;\n        cin >> x;\n  \
-    \      b[i] = x;\n    }\n\n    auto ans = and_convolution(a, b);\n    for(int\
+    \      b[i] = x;\n    }\n\n    auto ans = xor_convolution(a, b);\n    for(int\
     \ i=0; i<(1<<N); i++) {\n        cout << ans[i].val() << (i+1 == (1<<N) ? '\\\
     n' : ' ');\n    }\n}\n"
   dependsOn:
-  - convolution/and_convolution.cpp
-  - convolution/zeta_transform.cpp
-  - convolution/moebius_transform.cpp
+  - convolution/xor_convolution.cpp
+  - convolution/hadamard_transform.cpp
   isVerificationFile: true
-  path: yosupo/bitwise_and_convolution.test.cpp
+  path: yosupo/bitwise_xor_convolution.test.cpp
   requiredBy: []
-  timestamp: '2021-08-23 17:03:50+09:00'
+  timestamp: '2021-08-23 17:04:51+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: yosupo/bitwise_and_convolution.test.cpp
+documentation_of: yosupo/bitwise_xor_convolution.test.cpp
 layout: document
 redirect_from:
-- /verify/yosupo/bitwise_and_convolution.test.cpp
-- /verify/yosupo/bitwise_and_convolution.test.cpp.html
-title: yosupo/bitwise_and_convolution.test.cpp
+- /verify/yosupo/bitwise_xor_convolution.test.cpp
+- /verify/yosupo/bitwise_xor_convolution.test.cpp.html
+title: yosupo/bitwise_xor_convolution.test.cpp
 ---
