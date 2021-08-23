@@ -9,6 +9,7 @@
 
 template<typename T>
 std::vector<T> xor_convolution(const std::vector<T> &a, const std::vector<T> &b) {
+    assert(a.size() == b.size());
     auto sum_a = hadamard_transform(a, false);
     auto sum_b = hadamard_transform(b, false);
     std::vector<T> sum_c;

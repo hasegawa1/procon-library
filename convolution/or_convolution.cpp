@@ -10,6 +10,7 @@
 
 template<typename T>
 std::vector<T> or_convolution(const std::vector<T> &a, const std::vector<T> &b) {
+    assert(a.size() == b.size());
     auto sum_a = zeta_transform(a, true);
     auto sum_b = zeta_transform(b, true);
     std::vector<T> sum_c;
