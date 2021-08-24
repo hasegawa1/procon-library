@@ -9,6 +9,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: combinatorics/montmort_number.cpp
       title: "\u30E2\u30F3\u30E2\u30FC\u30EB\u6570"
+    - icon: ':warning:'
+      path: combinatorics/sum_of_arithmetric_progression.cpp
+      title: "\u7B49\u5DEE\u6570\u5217\u306E\u548C"
+    - icon: ':warning:'
+      path: combinatorics/sum_of_geometric_progression.cpp
+      title: "\u7B49\u6BD4\u6570\u5217\u306E\u548C"
   - name: convolution
     pages:
     - icon: ':heavy_check_mark:'
