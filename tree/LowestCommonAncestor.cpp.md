@@ -122,8 +122,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - yosupo/lowest_common_ancestor.test.cpp
-  - aizu/grl_5_c.test.cpp
   - aizu/festivals_in_joi_kingdom.test.cpp
+  - aizu/grl_5_c.test.cpp
 documentation_of: tree/LowestCommonAncestor.cpp
 layout: document
 redirect_from:

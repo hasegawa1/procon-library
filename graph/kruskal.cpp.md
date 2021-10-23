@@ -44,8 +44,8 @@ data:
   timestamp: '2021-07-20 14:18:41+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - aizu/grl_2_a_kruskal.test.cpp
   - aizu/festivals_in_joi_kingdom.test.cpp
+  - aizu/grl_2_a_kruskal.test.cpp
 documentation_of: graph/kruskal.cpp
 layout: document
 redirect_from:

@@ -171,6 +171,9 @@ data:
       path: tree/LowestCommonAncestor.cpp
       title: "\u6700\u5C0F\u5171\u901A\u7956\u5148\uFF08LCA: Lowest Common Ancestor\uFF09"
     - icon: ':heavy_check_mark:'
+      path: tree/Rerooting.cpp
+      title: "\u5168\u65B9\u4F4D\u6728DP\uFF08ReRooting\uFF09"
+    - icon: ':heavy_check_mark:'
       path: tree/diameter.cpp
       title: "\u6728\u306E\u76F4\u5F84"
   verificationCategories:
@@ -299,6 +302,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: aizu/railroad.test.cpp
       title: aizu/railroad.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: aizu/traffic_tree.test.cpp
+      title: aizu/traffic_tree.test.cpp
   - name: yosupo
     pages:
     - icon: ':heavy_check_mark:'

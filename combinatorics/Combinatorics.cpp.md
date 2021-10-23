@@ -131,13 +131,13 @@ data:
   timestamp: '2021-07-04 19:22:02+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - aizu/dpl_5_i.test.cpp
-  - aizu/dpl_5_c.test.cpp
-  - aizu/dpl_5_e.test.cpp
   - aizu/dpl_5_g.test.cpp
+  - aizu/dpl_5_e.test.cpp
+  - aizu/dpl_5_f.test.cpp
+  - aizu/dpl_5_c.test.cpp
+  - aizu/dpl_5_i.test.cpp
   - aizu/dpl_5_d.test.cpp
   - aizu/dpl_5_b.test.cpp
-  - aizu/dpl_5_f.test.cpp
 documentation_of: combinatorics/Combinatorics.cpp
 layout: document
 redirect_from:
