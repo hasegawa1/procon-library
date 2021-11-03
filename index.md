@@ -146,6 +146,9 @@ data:
       path: other/Timer.cpp
       title: "\u30BF\u30A4\u30DE\u30FC"
     - icon: ':warning:'
+      path: other/XorShift.cpp
+      title: Xorshift
+    - icon: ':warning:'
       path: other/binary_search.cpp
       title: "\u4E8C\u5206\u63A2\u7D22"
     - icon: ':heavy_check_mark:'
