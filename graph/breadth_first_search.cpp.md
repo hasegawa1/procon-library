@@ -43,8 +43,8 @@ data:
   timestamp: '2021-06-28 02:10:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - aizu/grl_5_a.test.cpp
   - aizu/alds1_11_c.test.cpp
+  - aizu/grl_5_a.test.cpp
 documentation_of: graph/breadth_first_search.cpp
 layout: document
 redirect_from:

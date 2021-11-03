@@ -111,6 +111,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: matrix/Matrix.cpp
       title: "\u884C\u5217\uFF08Mod p\uFF09"
+    - icon: ':warning:'
+      path: matrix/xor_basis.cpp
+      title: "XOR \u57FA\u5E95\uFF08noshi \u57FA\u5E95\uFF09"
   - name: number-theory
     pages:
     - icon: ':heavy_check_mark:'
@@ -139,6 +142,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/Imos2.cpp
       title: "2\u6B21\u5143imos\u6CD5"
+    - icon: ':warning:'
+      path: other/Timer.cpp
+      title: "\u30BF\u30A4\u30DE\u30FC"
     - icon: ':warning:'
       path: other/binary_search.cpp
       title: "\u4E8C\u5206\u63A2\u7D22"
