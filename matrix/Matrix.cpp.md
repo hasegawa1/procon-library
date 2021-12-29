@@ -139,8 +139,8 @@ data:
   timestamp: '2021-07-21 17:37:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - yosupo/matrix_determinant.test.cpp
   - yosupo/matrix_product.test.cpp
+  - yosupo/matrix_determinant.test.cpp
 documentation_of: matrix/Matrix.cpp
 layout: document
 redirect_from:

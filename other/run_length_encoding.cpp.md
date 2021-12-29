@@ -43,8 +43,8 @@ data:
   timestamp: '2021-07-20 00:08:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - aizu/illumination.test.cpp
   - aizu/illumination_string.test.cpp
+  - aizu/illumination.test.cpp
 documentation_of: other/run_length_encoding.cpp
 layout: document
 redirect_from:

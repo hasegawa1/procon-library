@@ -160,6 +160,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: other/schedule_intervals.cpp
       title: "\u533A\u9593\u30B9\u30B1\u30B8\u30E5\u30FC\u30EA\u30F3\u30B0\u554F\u984C"
+    - icon: ':warning:'
+      path: other/stovi.cpp
+      title: stovi
   - name: string
     pages:
     - icon: ':heavy_check_mark:'
