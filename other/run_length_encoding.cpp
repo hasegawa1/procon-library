@@ -7,22 +7,10 @@
 #include <string>
 #include <algorithm>
 
-std::vector<std::pair<char,int>> run_length_encoding(const std::string & s) {
-    std::vector<std::pair<char,int>> res;
-    for(const auto e: s) {
-        if(res.empty() || e != res.back().first) {
-            res.emplace_back(e, 1);
-        } else {
-            res.back().second++;
-        }
-    }
-    return res;
-}
-
-template<typename T>
-std::vector<std::pair<T,int>> run_length_encoding(const std::vector<T> & v) {
-    std::vector<std::pair<T,int>> res;
-    for(const auto e: v) {
+template<class T>
+auto run_length_encoding(const T& s) {
+    std::vector<std::pair<typename T::value_type, int>> res;
+    for(const auto& e: s) {
         if(res.empty() || e != res.back().first) {
             res.emplace_back(e, 1);
         } else {
