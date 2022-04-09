@@ -47,8 +47,8 @@ data:
   timestamp: '2021-07-21 13:34:00+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - aizu/grl_4_a_topo.test.cpp
   - aizu/railroad.test.cpp
+  - aizu/grl_4_a_topo.test.cpp
 documentation_of: graph/topological_sort.cpp
 layout: document
 redirect_from:

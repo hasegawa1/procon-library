@@ -17,30 +17,22 @@ data:
     links: []
   bundledCode: "#line 1 \"other/run_length_encoding.cpp\"\n/**\n * @brief \u9023\u9577\
     \u5727\u7E2E\n * @author hasegawa1\n */\n\n#include <vector>\n#include <string>\n\
-    #include <algorithm>\n\nstd::vector<std::pair<char,int>> run_length_encoding(const\
-    \ std::string & s) {\n    std::vector<std::pair<char,int>> res;\n    for(const\
-    \ auto e: s) {\n        if(res.empty() || e != res.back().first) {\n         \
-    \   res.emplace_back(e, 1);\n        } else {\n            res.back().second++;\n\
-    \        }\n    }\n    return res;\n}\n\ntemplate<typename T>\nstd::vector<std::pair<T,int>>\
-    \ run_length_encoding(const std::vector<T> & v) {\n    std::vector<std::pair<T,int>>\
-    \ res;\n    for(const auto e: v) {\n        if(res.empty() || e != res.back().first)\
-    \ {\n            res.emplace_back(e, 1);\n        } else {\n            res.back().second++;\n\
+    #include <algorithm>\n\ntemplate<class T>\nauto run_length_encoding(const T& s)\
+    \ {\n    std::vector<std::pair<typename T::value_type, int>> res;\n    for(const\
+    \ auto& e: s) {\n        if(res.empty() || e != res.back().first) {\n        \
+    \    res.emplace_back(e, 1);\n        } else {\n            res.back().second++;\n\
     \        }\n    }\n    return res;\n}\n"
   code: "/**\n * @brief \u9023\u9577\u5727\u7E2E\n * @author hasegawa1\n */\n\n#include\
-    \ <vector>\n#include <string>\n#include <algorithm>\n\nstd::vector<std::pair<char,int>>\
-    \ run_length_encoding(const std::string & s) {\n    std::vector<std::pair<char,int>>\
-    \ res;\n    for(const auto e: s) {\n        if(res.empty() || e != res.back().first)\
-    \ {\n            res.emplace_back(e, 1);\n        } else {\n            res.back().second++;\n\
-    \        }\n    }\n    return res;\n}\n\ntemplate<typename T>\nstd::vector<std::pair<T,int>>\
-    \ run_length_encoding(const std::vector<T> & v) {\n    std::vector<std::pair<T,int>>\
-    \ res;\n    for(const auto e: v) {\n        if(res.empty() || e != res.back().first)\
+    \ <vector>\n#include <string>\n#include <algorithm>\n\ntemplate<class T>\nauto\
+    \ run_length_encoding(const T& s) {\n    std::vector<std::pair<typename T::value_type,\
+    \ int>> res;\n    for(const auto& e: s) {\n        if(res.empty() || e != res.back().first)\
     \ {\n            res.emplace_back(e, 1);\n        } else {\n            res.back().second++;\n\
     \        }\n    }\n    return res;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: other/run_length_encoding.cpp
   requiredBy: []
-  timestamp: '2021-07-20 00:08:12+09:00'
+  timestamp: '2022-04-09 15:55:28+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - aizu/illumination_string.test.cpp

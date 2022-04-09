@@ -36,8 +36,8 @@ data:
   timestamp: '2021-08-15 13:05:14+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - aizu/alds1_14_a.test.cpp
   - aizu/alds1_14_b.test.cpp
+  - aizu/alds1_14_a.test.cpp
 documentation_of: string/string_search_z.cpp
 layout: document
 redirect_from:
