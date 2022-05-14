@@ -40,8 +40,8 @@ data:
   isVerificationFile: false
   path: convolution/moebius_transform.cpp
   requiredBy:
-  - convolution/or_convolution.cpp
   - convolution/and_convolution.cpp
+  - convolution/or_convolution.cpp
   timestamp: '2021-08-23 17:03:50+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:

@@ -159,10 +159,10 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - yukicoder/886.test.cpp
-  - aizu/alds1_1_c.test.cpp
-  - aizu/ntl_1_d.test.cpp
-  - aizu/itp1_3_d.test.cpp
   - aizu/ntl_1_a.test.cpp
+  - aizu/itp1_3_d.test.cpp
+  - aizu/ntl_1_d.test.cpp
+  - aizu/alds1_1_c.test.cpp
 documentation_of: number-theory/Sieve.cpp
 layout: document
 redirect_from:

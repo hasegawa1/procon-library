@@ -84,9 +84,9 @@ data:
   timestamp: '2021-07-20 13:31:57+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - aizu/grl_1_a.test.cpp
-  - aizu/festivals_in_joi_kingdom.test.cpp
   - aizu/railroad.test.cpp
+  - aizu/festivals_in_joi_kingdom.test.cpp
+  - aizu/grl_1_a.test.cpp
   - aizu/grl_5_a.test.cpp
 documentation_of: graph/dijkstra.cpp
 layout: document

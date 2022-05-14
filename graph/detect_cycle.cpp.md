@@ -65,8 +65,8 @@ data:
   timestamp: '2021-07-26 23:53:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - aizu/grl_4_a.test.cpp
   - yosupo/cycle_detection.test.cpp
+  - aizu/grl_4_a.test.cpp
 documentation_of: graph/detect_cycle.cpp
 layout: document
 redirect_from:
